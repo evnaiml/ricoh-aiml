@@ -157,12 +157,12 @@ The project uses a comprehensive ML stack including:
    # Create base environment
    conda create -n churn-ml-env python=3.10.18
    conda activate churn-ml-env
-   
+
    # Add channels
    conda config --add channels rapidsai
    conda config --add channels nvidia
    conda config --add channels conda-forge
-   
+
    # Install key packages
    conda install -c rapidsai -c nvidia -c conda-forge \
      catboost=1.2.8 \
@@ -247,15 +247,12 @@ This module provides [functionality description] suitable for enterprise environ
     Evgeni Nikolaev
     Email: evgeni.nikolaev@ricoh-usa.com
     Ricoh AI/ML Team
-    
+
 ## Version:
     1.0.0
-    
-## Created:
-    2025-07-29
-    
-## Last Updated:
-    2025-08-16
+
+## UPDATED ON: 2025-08-22
+## CREATED ON: 2025-07-29
 """
 ```
 
@@ -275,85 +272,17 @@ Pydantic schemas ensure type safety:
 - Boolean standardization (0/1 encoding)
 - NaN/NaT handling for failed conversions
 
-## 🏗️ Architecture
-
-### Data Pipeline Architecture
-
-```
-Snowflake → Pydantic Validation → Type Enforcement → Feature Engineering → Model Training
-     ↓              ↓                    ↓                   ↓                  ↓
-Raw Data    Schema Validation    Clean Types        TSFresh Features    CatBoost Model
-```
-
-### Data Loading Framework Architecture
-
-#### Training Data Pipeline (SnowTrainDataLoader)
-```
-Raw Data → Usage Processing → 2023 H1 Imputation → Merge Datasets → Feature Engineering
-    ↓            ↓                    ↓                 ↓                    ↓
-All Customers  Weekly Agg    Fill Missing Values  Combined Data    TSFresh Features
-```
-
-#### Live/Active Data Pipeline (SnowLiveDataLoader)
-```
-Raw Data → Filter Active → Usage Processing → NO Imputation → Compare with Training → Add Flag
-    ↓           ↓                ↓                  ↓                ↓                    ↓
-All Data   CHURNED_FLAG=0   Weekly Agg      Keep Missing     Identify New      new_data: 0/1
-```
-
-#### Key Differences
-| Aspect | Training Pipeline | New Data Pipeline |
-|--------|------------------|-------------------|
-| **Customers** | All (churned & active) | Active only (CHURNED_FLAG=0) |
-| **Imputation** | Yes (2023 H1 method) | No (keep missing values) |
-| **Purpose** | Model training | Inferencing |
-| **Output** | Training features | Features with new_data flag |
-| **Comparison** | N/A | Compares with training data |
-
-### Feature Engineering Pipeline
-
-```python
-Pipeline([
-    ('tsfresh', TSFreshTransformer()),
-    ('selection', TSFreshFeatureSelector(
-        methods=['tsfresh_fdr', 'boruta', 'catboost', 'shap'],
-        max_features=150
-    ))
-])
-```
-
-### Model Architecture
-
-```python
-TwoStageCatBoostChurnModel:
-    - Stage 1: Survival regression (when will they churn?)
-    - Stage 2: Calibrated classification (will they churn at time t?)
-```
-
-### Technology Stack
+## Technology Stack
 
 - **Data Platform**: Snowflake
-- **ML Framework**: CatBoost (GPU-accelerated)
-- **Feature Engineering**: TSFresh
 - **Data Validation**: Pydantic
 - **Configuration**: Hydra
 - **Logging**: Loguru
-- **Visualization**: Matplotlib/Seaborn
-- **Parallelization**: Dask
+- **Parallelization**: Dask / Ray / Optuna
 
 ## 🤝 Contributing
 
 We welcome contributions! Please follow these guidelines:
-
-### Development Setup
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Follow the coding standards:
-   - Use type hints for all functions
-   - Include comprehensive docstrings
-   - Add unit tests for new features
-   - Update documentation as needed
 
 ### Coding Standards
 
@@ -362,13 +291,6 @@ We welcome contributions! Please follow these guidelines:
 - **Logging**: Use structured logging with Loguru
 - **Testing**: Maintain >80% code coverage
 - **Commits**: Use descriptive commit messages
-
-### Pull Request Process
-
-1. Update the README.md with details of changes
-2. Ensure all tests pass
-3. Update documentation
-4. Request review from maintainers
 
 ## 📄 License
 
