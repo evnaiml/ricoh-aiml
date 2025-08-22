@@ -1,0 +1,39 @@
+# Parent folder path configurations
+# -----------------------------------------------------------------------------
+# * Snowflake session configurations
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-07-29
+# * CREATED ON: 2025-07-29
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+paths_to_folders:
+  data:
+    root: "data/"
+    raw: "data/raw/"
+    processed: "data/processed/"
+    interim: "data/interim/"
+    external: "data/external/"
+
+  outputs:
+    root: "outputs/"
+    models: "outputs/models/"
+    predictions: "outputs/predictions/"
+    figures: "outputs/figures/"
+    reports: "outputs/reports/"
+    experiments: "outputs/experiments/"
+
+  logs:
+    root: "src/logs/"
+    loguru: "src/logs/loguru/"
+    system: "src/logs/system/"
+
+  config:
+    root: "src/conf/"
+    backup: "src/conf/backup/"

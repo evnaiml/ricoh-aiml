@@ -1,0 +1,8 @@
+# PyTorch offers pre-built binaries that include specific CUDA runtime dependencies. 
+# While you have CUDA 12.4 installed on your system, the PyTorch binaries you install 
+# will ship with their own CUDA runtime. To install a PyTorch version compatible with 
+# CUDA 12.4, you should use the official PyTorch installation instructions and select 
+# the CUDA 12.4 option during the installation process. For example, using pip, 
+# the command to install PyTorch with CUDA 12.4 would typically look like this:
+# 
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124

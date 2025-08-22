@@ -1,0 +1,998 @@
+{
+  "model_name": "PS_DOCUWARE_SNOW_SURVEYModel",
+  "fields": {
+    "ASMT_METRIC_RESULT_ID_WPK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "AINST4968058-INC0014433080",
+          "AINST4755168-INC0013590777",
+          "AINST4025112-INC0010216063",
+          "AINST4627535-INC0013030818",
+          "AINST4587960-INC0012724451"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSESSMENT_GROUP_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "1747356047fade5011ac9cba216d439e",
+          "feb1c4f193478a501e36770efaba10c2",
+          "d60820b81b76d194969f5313604bcbbe",
+          "069663f19778ca5046255b900153af15",
+          "dc4c5cfa1b4006904a2c5314604bcbb4"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSESSMENT_GROUP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "ASG4966248",
+          "ASG4753640",
+          "ASG4025116",
+          "ASG4626242",
+          "ASG4586715"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SYS_CREATED_BY": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "guest",
+          "guest",
+          "guest",
+          "guest",
+          "guest"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SYS_UPDATED_BY": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "guest",
+          "guest",
+          "guest",
+          "guest",
+          "guest"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNED_TO_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          "34ff7be6db4b8344ebba7a131f9619e5",
+          "0aa8286edbc84300b57af2f9af9619a2",
+          "e8b14cb61b1a68901393539f034bcbf8",
+          "8acf6ff647642150b3ca7e37536d43ca",
+          "eb3cc891db89cf40f20cf209af961966"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TRIGGER_TABLE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "incident",
+          "incident",
+          "incident",
+          "incident",
+          "incident"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "64ec5caa1bfa2c90274ca829bc4bcb42",
+          "7e1dd9ca1b239c90f2290d0cf94bcb8a",
+          "8c145cd2db6520d0363ea7a813961907",
+          "8c145cd2db6520d0363ea7a813961907",
+          "55f45c88db944340f20cf209af961963"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TAKEN_ON": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-12-27 16:17:10",
+          "2024-06-27 18:34:08",
+          "2022-10-24 19:40:00",
+          "2024-03-08 14:55:51",
+          "2024-02-02 23:02:13"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "TAKEN_ON_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 106,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-12-27",
+          "2024-06-27",
+          "2022-10-24",
+          "2024-03-08",
+          "2024-02-02"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "COMPANY_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(60) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(60)",
+        "unique_count": 60,
+        "missing_count": "0",
+        "sample_values": [
+          "b9eb90aedb04c700ebba7a131f96194f",
+          "21532826db84c700ebba7a131f961978",
+          "aab3292cdb5e3200bd78f8621f9619a6",
+          "aab3292cdb5e3200bd78f8621f9619a6",
+          "5aa1068bdbc5470055cefb541f96193f"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CMDB_CI_ID_FK": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(8) field with 104 missing values",
+      "metadata": {
+        "inferred_type": "cat(8)",
+        "unique_count": 8,
+        "missing_count": "104",
+        "sample_values": [
+          "9d39101bdb5f98102def9ed3ca9619f9",
+          "929e8e771b18a8907a83766dcc4bcb32",
+          "929e8e771b18a8907a83766dcc4bcb32",
+          "495508c91b1e041829ce20622a4bcb61",
+          "929e8e771b18a8907a83766dcc4bcb32"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INSTANCE_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "AINST4968058",
+          "AINST4755168",
+          "AINST4025112",
+          "AINST4627535",
+          "AINST4587960"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TRANSACTION_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "INC0014433080",
+          "INC0013590777",
+          "INC0010216063",
+          "INC0013030818",
+          "INC0012724451"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INCIDENT_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(118) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(118)",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "INC0014433080",
+          "INC0013590777",
+          "INC0010216063",
+          "INC0013030818",
+          "INC0012724451"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SC_REQ_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SC_REQ_ITEM_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          "craig.heintz@ricoh-usa.com",
+          "valerie.sueping@ricoh-usa.com",
+          "jainet.bowens@ricoh-usa.com",
+          "nahum.samuel@ricoh-usa.com",
+          "kevin.fultz@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_EMP_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          6000007795,
+          22130214,
+          22145076,
+          22148930,
+          159895
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "AGENT_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          "Craig Heintz",
+          "Valerie Sue Ping",
+          "Jainet Bowens",
+          "Nahum Samuel",
+          "Kevin Fultz"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_DESCRIPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat(5) field",
+      "metadata": {
+        "inferred_type": "cat(5)",
+        "unique_count": 5,
+        "missing_count": "0",
+        "sample_values": [
+          "- SD for Service Delivery\r\n- CCW is the Teams Portfolio (Capture/Content/Workflow)  \r\n- Group Supports CSO SESC L1/L2 Escalaltions\r\n\r\nMANAGER(S): Matt Vaihn & Timothy Shinefield\r\nDIRECTOR:  Joseph Ferrar Lii\r\nVP: Derrick Rankin",
+          "L2 Solutions Support Team - Deactivated per TASK1779350 / REQ1154161",
+          "Snow Group",
+          "Snow Group",
+          "SSC Software Engineering Team"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "SD - CCW Solutions Escalations",
+          "CSO SESC - L2 Solutions",
+          "CSO ITS - US Shared SD",
+          "CSO ITS - US Shared SD",
+          "TSSC - Software Engineering"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_CRM_REFERENCE_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "PS-CORE PRINT SW",
+          "CSO-CORE-SESC",
+          "CSO-ITSD",
+          "CSO-ITSD",
+          "CSO-CORE-SW"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CMDB_CI_CATEGORY": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CMDB_CI_CATEGORY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat(9) field",
+      "metadata": {
+        "inferred_type": "cat(9)",
+        "unique_count": 9,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COMPANY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(60) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(60)",
+        "unique_count": 60,
+        "missing_count": "0",
+        "sample_values": [
+          "INDIANA BUREAU OF MOTOR VEHICLES-4399659",
+          "RICHWAY INTERNATIONAL-13696299",
+          "Csc Service Works",
+          "Csc Service Works",
+          "PECO FOODS INC-2024009"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "U_BILLING_AUTHORITY": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "MINDSHIFT",
+          "MINDSHIFT",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SERVICE_LINE": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "ITS",
+          "ITS",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUBJECT_FULL_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          "TSSC - Standard > Troubleshooting",
+          "TSSC - Standard > How To Questions > Other",
+          "ITSD",
+          "ITSD > Account Access",
+          "TSSC - Software Support Center > Application"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "STATUS": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUB_STATE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "Pending Requested Action"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DISPATCH_SOURCE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SR_REFERENCE_ID": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SERVICE_PRODUCT": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "DocuWare",
+          "DocuWare",
+          "N/A",
+          "N/A",
+          "DocuWare"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SERIAL_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(26) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(26)",
+        "unique_count": 26,
+        "missing_count": "0",
+        "sample_values": [
+          "807216",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONFIGURATION_ITEM": {
+      "type": "str",
+      "required": true,
+      "description": "cat(9) field",
+      "metadata": {
+        "inferred_type": "cat(9)",
+        "unique_count": 9,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "REASSIGNMENT_COUNT": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(5) field",
+      "metadata": {
+        "inferred_type": "cat_int(5)",
+        "unique_count": 5,
+        "missing_count": "0",
+        "sample_values": [
+          2,
+          2,
+          0,
+          0,
+          2
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLVED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(20) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(20)",
+        "unique_count": 20,
+        "missing_count": "0",
+        "sample_values": [
+          "Craig Heintz",
+          "Valerie Sue Ping",
+          "Jainet Bowens",
+          "Nahum Samuel",
+          "Kevin Fultz"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLVED_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 103,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-12-27",
+          "2024-06-27",
+          "2022-10-24",
+          "2024-03-08",
+          "2024-02-02"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "CLOSED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(20) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(20)",
+        "unique_count": 20,
+        "missing_count": "0",
+        "sample_values": [
+          "Craig Heintz",
+          "Valerie Sue Ping",
+          "Jainet Bowens",
+          "Nahum Samuel",
+          "Kevin Fultz"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 103,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-01-01",
+          "2024-06-30",
+          "2022-10-27",
+          "2024-03-11",
+          "2024-02-05"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "CLOSE_CODE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "Solved (Permanently)",
+          "Solved (3rd Party Escalation)",
+          "Solved (Permanently)",
+          "Solved Remotely (Permanently)",
+          "Solved Remotely (Permanently)"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSE_NOTES": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(116) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(116)",
+        "unique_count": 116,
+        "missing_count": "0",
+        "sample_values": [
+          "It seems that this server was having issues contacting the domain controller properly.  Once Windows Updates were applies to both the DC and this server it began working properly.",
+          "closing. \r\nVendor was already aware of issue/ applied fix/ monitored/ resolved.",
+          "Docuware Access Created",
+          "I was able to successfully assist Deborah with getting back into her Docuware account.",
+          "Installed the missing C++ redistributable files from the client setup prerequisites of the installation software on the Windows 11 PC and tested.\r\nScanning worked as expected. "
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "PRIORITY": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(4) field",
+      "metadata": {
+        "inferred_type": "cat_int(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CALLER_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(86) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(86)",
+        "unique_count": 86,
+        "missing_count": "0",
+        "sample_values": [
+          "Aleyda Shockey",
+          "Michael Inouye",
+          "Leah Villar",
+          "Deborah Smith",
+          "Mark Foucher"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTACT_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(7) field",
+      "metadata": {
+        "inferred_type": "cat(7)",
+        "unique_count": 7,
+        "missing_count": "0",
+        "sample_values": [
+          "phone",
+          "Phone",
+          "ebond",
+          "phone",
+          "phone"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SHORT_DESCRIPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(109) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(109)",
+        "unique_count": 109,
+        "missing_count": "0",
+        "sample_values": [
+          "Docuware Login Issue",
+          "Docuware Cloud",
+          "DOCUWARE ACCESS NEEDED",
+          "CNH - Deboarh Smith - Docuware",
+          "DocuWare Scan the upload takes a very long time on Windows 11 PC."
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OVERALL_EXPERIENCE": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Satisfied",
+          "Satisfied",
+          "Satisfied",
+          "Satisfied",
+          "Satisfied"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RATING_OPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "Communication",
+          "Resolution Time",
+          "N/A",
+          "Resolution Time",
+          "Other"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ADDITIONAL_COMMENTS": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(54) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(54)",
+        "unique_count": 54,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "Very personable and professional.",
+          "Great Service"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ETL_UPSERT_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-07-02 07:04:52",
+          "2025-07-02 07:04:52",
+          "2025-07-02 07:04:52",
+          "2025-07-02 07:04:52",
+          "2025-07-02 07:04:52"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "AGENT_COUNTRY": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_ASSIGNED_FLAG": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "Assigned",
+          "Assigned",
+          "Assigned",
+          "Assigned",
+          "Assigned"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLVED_AT": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-12-27 15:29:42",
+          "2024-06-27 18:12:58",
+          "2022-10-24 19:37:14",
+          "2024-03-08 14:31:37",
+          "2024-02-02 19:34:24"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "CLOSED_AT": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 118,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-01-01 16:00:13",
+          "2024-06-30 19:03:06",
+          "2022-10-27 20:02:10",
+          "2024-03-11 15:02:36",
+          "2024-02-05 20:01:51"
+        ],
+        "actual_dtype": "datetime"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_SNOW_SURVEY table",
+  "created_at": "2025-08-13T13:50:15.478528"
+}

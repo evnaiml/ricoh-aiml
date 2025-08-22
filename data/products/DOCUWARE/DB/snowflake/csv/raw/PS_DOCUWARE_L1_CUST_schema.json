@@ -1,0 +1,210 @@
+{
+  "model_name": "PS_DOCUWARE_L1_CUSTModel",
+  "fields": {
+    "CUST_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(695) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(695)",
+        "unique_count": 695,
+        "missing_count": "0",
+        "sample_values": [
+          15119737,
+          15121279,
+          15121343,
+          15123276,
+          15123437
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "CUST_PARTY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(688) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(688)",
+        "unique_count": 688,
+        "missing_count": "0",
+        "sample_values": [
+          "SUPERIOR STEEL FABRICATION",
+          "SPOKANE REGIONAL CLEAN AIR AGENCY",
+          "TILLAMOOK PEOPLES UTILITIES DISTRICT",
+          "CDA TRIBE",
+          "SEASIDE SCHOOL DIST 10"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L3_RISE_CONSOLIDATED_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(642) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(642)",
+        "unique_count": 642,
+        "missing_count": "0",
+        "sample_values": [
+          "A-1001401015",
+          "O-15121279",
+          "A-1001401034",
+          "A-0013767290",
+          "A-0013752807"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L3_RISE_CONSOLIDATED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(642) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(642)",
+        "unique_count": 642,
+        "missing_count": "0",
+        "sample_values": [
+          "SUPERIOR STEEL LLC",
+          "SPOKANE REGIONAL CLEAN AIR AGENCY",
+          "TILLAMOOK PEOPLES UTILITY DISTRICT",
+          "COEUR D ALENE INDIAN TRIBE (ID)",
+          "SEASSIDE SCHOOL DISTRICT 10 (OR)"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L2_RISE_CONSOLIDATED_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(669) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(669)",
+        "unique_count": 669,
+        "missing_count": "0",
+        "sample_values": [
+          "A-0013765183",
+          "O-15121279",
+          "A-0013543322",
+          "A-0013767290",
+          "A-0013752807"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L2_RISE_CONSOLIDATED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(669) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(669)",
+        "unique_count": 669,
+        "missing_count": "0",
+        "sample_values": [
+          "SUPERIOR STEEL FABRICATION",
+          "SPOKANE REGIONAL CLEAN AIR AGENCY",
+          "TILLAMOOK PEOPLES UTILITY DISTRICT",
+          "COEUR D ALENE INDIAN TRIBE (ID)",
+          "SEASSIDE SCHOOL DISTRICT 10 (OR)"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUST_ACCOUNT_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "External",
+          "External",
+          "External",
+          "External",
+          "External"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUSTOMER_SEGMENT": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(9) field with 3 missing values",
+      "metadata": {
+        "inferred_type": "cat(9)",
+        "unique_count": 9,
+        "missing_count": "3",
+        "sample_values": [
+          "Targeted",
+          "SMB",
+          "Targeted",
+          "SLG",
+          "K-12"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUSTOMER_SEGMENT_LEVEL": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(4) field with 3 missing values",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "3",
+        "sample_values": [
+          "Level 2",
+          "None",
+          "Level 1",
+          "None",
+          "None"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CHURNED_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=churned (Y/True), 0=not churned (N/False)",
+      "validator": "bool_to_int",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Y",
+          "Y", 
+          "Y",
+          "Y",
+          "N"
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      }
+    },
+    "CHURN_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 390 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 225,
+        "missing_count": "390",
+        "sample_values": [
+          "2015-09-08",
+          "2016-03-01",
+          "2017-12-31",
+          "2017-12-19",
+          "2022-03-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_L1_CUST table",
+  "created_at": "2025-08-13T13:49:54.034566"
+}

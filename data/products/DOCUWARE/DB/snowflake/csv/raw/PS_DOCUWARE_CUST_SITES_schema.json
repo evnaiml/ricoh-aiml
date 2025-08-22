@@ -1,0 +1,362 @@
+{
+  "model_name": "PS_DOCUWARE_CUST_SITESModel",
+  "fields": {
+    "CUST_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(4480) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(4480)",
+        "unique_count": 4480,
+        "missing_count": "0",
+        "sample_values": [
+          36729928,
+          14886874,
+          14876919,
+          4832710,
+          3307357
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "L3_RISE_CONSOLIDATED_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(644) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(644)",
+        "unique_count": 644,
+        "missing_count": "0",
+        "sample_values": [
+          "A-1001388527",
+          "A-0013455652",
+          "A-0013454070",
+          "A-1000720155",
+          "A-1001405201"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L3_RISE_CONSOLIDATED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(644) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(644)",
+        "unique_count": 644,
+        "missing_count": "0",
+        "sample_values": [
+          "THE CARLYLE GROUP L P",
+          "MITSUI",
+          "FED - HHS",
+          "HILLSBOROUGH COUNTY PUBLIC SCHOOLS (FL)",
+          "WESTERN KENTUCKY UNIVERSITY"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L2_RISE_CONSOLIDATED_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1585) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1585)",
+        "unique_count": 1585,
+        "missing_count": "0",
+        "sample_values": [
+          "A-1003181371",
+          "A-0013507028",
+          "A-0013762619",
+          "A-0013603565",
+          "A-0013685873"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "L2_RISE_CONSOLIDATED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1585) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1585)",
+        "unique_count": 1585,
+        "missing_count": "0",
+        "sample_values": [
+          "CARLYLE GROUP - HILB GROUP",
+          "MOL AMERICA INC",
+          "FED - NATIONAL INSTITUTES OF HEALTH",
+          "HILLSBOROUGH COUNTY SCHOOL DISTRICT (FL)",
+          "WESTERN KENTUCKY UNIVERSITY"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUST_ACCT_SITES_WPK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 154155,
+        "missing_count": "0",
+        "sample_values": [
+          6977127297,
+          132093788,
+          132104152,
+          543979790,
+          398877558
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RISE_ACCOUNT_ID": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 69078 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 75625,
+        "missing_count": "69078",
+        "sample_values": [
+          300004412621970,
+          100000072689285,
+          100000028689254,
+          100000030175071,
+          100000005081949
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RISE_ACCOUNT_NUMBER": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(75625) field with 69078 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(75625)",
+        "unique_count": 75625,
+        "missing_count": "69078",
+        "sample_values": [
+          "A-1004450752",
+          "A-0003518755",
+          "A-0009684416",
+          "A-0012851747",
+          "A-0003346540"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DNB_DUNS_NUMBER": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(39202) field with 50606 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(39202)",
+        "unique_count": 39202,
+        "missing_count": "50606",
+        "sample_values": [
+          799564500,
+          1893028,
+          800505294,
+          52534207,
+          68970818
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "DNB_BUSINESS_NAME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(10207) field with 57614 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(10207)",
+        "unique_count": 10207,
+        "missing_count": "57614",
+        "sample_values": [
+          "MOL (AMERICA) INC.",
+          "NATIONAL INSTITUTES OF HEALTH",
+          "HILLSBOROUGH COUNTY PUBLIC SCHOOLS",
+          "WESTERN KENTUCKY UNIVERSITY",
+          "MOUNTAINCARE, INC."
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DNB_GLOBAL_ULTI_DUNS_NUMBER": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(11043) field with 368 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(11043)",
+        "unique_count": 11043,
+        "missing_count": "368",
+        "sample_values": [
+          78719042,
+          690598594,
+          161906193,
+          79799075,
+          77876258
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "DNB_GLOBAL_ULTI_DUNS_NAME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(8454) field with 368 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(8454)",
+        "unique_count": 8454,
+        "missing_count": "368",
+        "sample_values": [
+          "THE HILB GROUP LLC",
+          "MITSUI O.S.K. LINES, LTD.",
+          "GOVERNMENT OF THE UNITED STATES",
+          "HILLSBOROUGH COUNTY PUBLIC SCHOOLS",
+          "WESTERN KENTUCKY UNIVERSITY, INC."
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SALES_VOL_USD": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 57614 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 7669,
+        "missing_count": "57614",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "EMPLOYEES_HERE": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 57614 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 780,
+        "missing_count": "57614",
+        "sample_values": [
+          19,
+          9,
+          1,
+          1,
+          53
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "SQUARE_FOOTAGE": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 66164 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 1137,
+        "missing_count": "66164",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "US_1987_SIC_1_1": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(2497) field with 57614 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(2497)",
+        "unique_count": 2497,
+        "missing_count": "57614",
+        "sample_values": [
+          47310200,
+          94310401,
+          82110303,
+          82210102,
+          83220400
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "LINE_OF_BUSINESS": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(618) field with 66164 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(618)",
+        "unique_count": 618,
+        "missing_count": "66164",
+        "sample_values": [
+          "FREIGHT TRANSPORTATION ARRANGEMENT",
+          "ADMINISTRATIVE PUBLIC HEALTH PROGRAMS",
+          "ELEMENTARY/SECONDARY SCHOOL",
+          "COLLEGE/UNIVERSITY",
+          "INDIVIDUAL/FAMILY SERVICES"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "POSTAL_CODE": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(12542) field with 1 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(12542)",
+        "unique_count": 12542,
+        "missing_count": "1",
+        "sample_values": [
+          46723,
+          60148,
+          20892,
+          33647,
+          42701
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "CRM_INDUSTRY": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(19) field with 69078 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "69078",
+        "sample_values": [
+          "Banking & Finance",
+          "K-12",
+          "Higher Education",
+          "Retail & Distribution",
+          "Wholesale Trade"
+        ],
+        "actual_dtype": "str"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_CUST_SITES table",
+  "created_at": "2025-08-13T13:50:08.957547"
+}

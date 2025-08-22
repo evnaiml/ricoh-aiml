@@ -1,0 +1,46 @@
+# -----------------------------------------------------------------------------
+# * CSV Join Rules Data Output Configuration
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-08-04
+# * CREATED ON: 2025-08-04
+# -----------------------------------------------------------------------------
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+csv_output:
+  # Base directory for CSV files (relative to project root found by ProjectRootFinder)
+  # KEY CHANGE: Different base directory for join rules
+  base_dir: "data/products/DOCUWARE/DB/snowflake/csv/join_rules"  # vs csv/raw
+
+  # CSV file settings (same as raw config)
+  settings:
+    index: false
+    encoding: "utf-8"
+    sep: ","
+    na_rep: ""
+    float_format: "%.6f"
+    date_format: "%Y-%m-%d %H:%M:%S"
+
+  # NEW: Join rules specific settings
+  join_rules:
+    file_naming:
+      prefix: ""
+      suffix: ""
+      timestamp: false
+
+    validation:
+      check_duplicates: true
+      validate_joins: true
+      min_rows_expected: 1
+
+    performance:
+      parallel_processing: false
+      cache_intermediate: false
+      memory_monitor: true

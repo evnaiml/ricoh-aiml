@@ -1,0 +1,147 @@
+# -----------------------------------------------------------------------------
+# * Main Hydra Configuration
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-08-04
+# * CREATED ON: 2025-07-31
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+defaults:
+  - loggers/loguru: loguru
+  - products/DOCUWARE/db/snowflake: session
+  - products/DOCUWARE/db/snowflake/csv_config: csv_raw_config
+  - products/DOCUWARE/db/snowflake/sequel_rules: sequel_join_rules
+  - validation/pydantic: config
+  - _self_
+
+# Global settings
+debug: false
+disable_console_logging: false
+environment: "development"  # Options: development, production
+
+# Application metadata
+app:
+  name: "ricoh_aiml"
+  version: "1.0.0"
+  description: "Ricoh AI/ML Data Processing Pipeline"
+  author: "Evgeni Nikolaev"
+  email: "evgeni.nikolaev@ricoh-usa.com"
+
+# Data processing settings
+data:
+  # Default row limits for data fetching
+  max_tables: null              # null = no limit, or specify number
+  row_limit: null               # null = fetch all rows, or specify limit
+  chunk_size: 10000            # For chunked processing
+
+  # Data validation settings (for pydantic integration)
+  validation:
+    enabled: true
+    strict_mode: false         # Allow type coercion
+    validate_assignment: true   # Validate on field assignment
+    use_enum_values: true      # Use enum values instead of enum objects
+    extra: "forbid"            # Options: ignore, allow, forbid
+
+  # Export settings
+  export:
+    include_schema: true       # Generate schema files
+    include_report: true       # Generate data quality reports
+    date_format: "%Y-%m-%d"    # Date format for exports
+    datetime_format: "%Y-%m-%d %H:%M:%S"  # Datetime format
+
+# Processing settings
+processing:
+  # Parallel processing
+  max_workers: 4              # Number of parallel workers
+  use_threading: true         # Use threading for I/O bound tasks
+
+  # Memory management
+  memory_limit_gb: 8          # Memory limit in GB
+  optimize_memory: true       # Enable memory optimization
+
+  # Error handling
+  continue_on_error: true     # Continue processing on individual table errors
+  max_retries: 3              # Maximum retry attempts
+  retry_delay: 5              # Delay between retries (seconds)
+
+# Output paths (relative to project root)
+paths:
+  # Data outputs
+  data_output: "data/products/DOCUWARE/DB/snowflake"
+  csv_output: "data/products/DOCUWARE/DB/snowflake/csv/raw"
+
+  # Other outputs
+  models_output: "outputs/models"
+  predictions_output: "outputs/predictions"
+  figures_output: "outputs/figures"
+  reports_output: "outputs/reports"
+
+  # Logs
+  logs_dir: "logs"
+
+# Progress tracking
+progress:
+  show_progress: true         # Show progress bars
+  update_interval: 1          # Progress update interval (seconds)
+
+# Performance monitoring
+monitoring:
+  enable_profiling: false     # Enable performance profiling
+  profile_memory: false       # Enable memory profiling
+  log_execution_time: true    # Log execution times
+
+# Machine Learning settings (for future use)
+ml:
+  # Model settings
+  random_state: 42            # For reproducibility
+  test_size: 0.2              # Train/test split ratio
+  cv_folds: 5                 # Cross-validation folds
+
+  # Feature engineering
+  scale_features: true        # Enable feature scaling
+  handle_missing: "drop"      # Options: drop, impute, interpolate
+
+# Pydantic settings (for data validation)
+pydantic:
+  # Field validation
+  validate_assignment: true   # Validate when assigning to fields
+  use_enum_values: true      # Return enum values instead of enum objects
+  allow_population_by_field_name: true  # Allow field population by field name
+
+  # Schema generation
+  generate_schema: true       # Generate JSON schema for models
+  schema_extra: {}           # Additional schema information
+
+  # Error handling
+  error_msg_templates: {}    # Custom error message templates
+
+# Database connection pools
+connection_pools:
+  snowflake:
+    min_connections: 1
+    max_connections: 10
+    pool_timeout: 30
+    pool_recycle: 3600       # Recycle connections after 1 hour
+
+# Caching settings
+cache:
+  enabled: false             # Enable caching (for future use)
+  ttl: 3600                 # Time to live in seconds
+  max_size: 1000            # Maximum cache size
+
+# Security settings
+security:
+  mask_credentials: true     # Mask credentials in logs
+  log_sql_queries: false     # Log SQL queries (be careful with sensitive data)
+
+# Hydra specific settings
+hydra:
+  job:
+    chdir: false            # Don't change working directory

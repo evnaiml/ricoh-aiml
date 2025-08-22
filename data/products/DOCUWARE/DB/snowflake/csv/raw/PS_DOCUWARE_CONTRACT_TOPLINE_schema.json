@@ -1,0 +1,960 @@
+{
+  "model_name": "PS_DOCUWARE_CONTRACT_TOPLINEModel",
+  "fields": {
+    "CUST_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(604) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(604)",
+        "unique_count": 604,
+        "missing_count": "0",
+        "sample_values": [
+          2079829,
+          2079829,
+          2079829,
+          2079829,
+          2079829
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "CUST_PARTY_NAME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(597) field with 70 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(597)",
+        "unique_count": 597,
+        "missing_count": "70",
+        "sample_values": [
+          "RJ YOUNG COMPANY",
+          "RJ YOUNG COMPANY",
+          "RJ YOUNG COMPANY",
+          "RJ YOUNG COMPANY",
+          "RJ YOUNG COMPANY"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTRACT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(2809) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(2809)",
+        "unique_count": 2809,
+        "missing_count": "0",
+        "sample_values": [
+          5276633,
+          5276633,
+          5276633,
+          5276633,
+          5276633
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "CONTRACTS_HEADER_WPK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 2809,
+        "missing_count": "0",
+        "sample_values": [
+          29801393,
+          29801393,
+          29801393,
+          29801393,
+          29801393
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "SOURCE_ID": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(1) field",
+      "metadata": {
+        "inferred_type": "cat_int(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          85,
+          85,
+          85,
+          85,
+          85
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CONTRACTS_TOPLINE_WPK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 29580,
+        "missing_count": "0",
+        "sample_values": [
+          156682843,
+          156682768,
+          156682797,
+          156682793,
+          208239142
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CNH_ID": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(2809) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(2809)",
+        "unique_count": 2809,
+        "missing_count": "0",
+        "sample_values": [
+          24438502,
+          24438502,
+          24438502,
+          24438502,
+          24438502
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "MASTER_ITEM_FK": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(6) field",
+      "metadata": {
+        "inferred_type": "cat_int(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          2816225,
+          2816225,
+          2816225,
+          2816225,
+          2816225
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ACCOUNT_SITES_SHIP_TO_FK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 726,
+        "missing_count": "0",
+        "sample_values": [
+          6273876841,
+          6273876841,
+          6273876841,
+          6273876841,
+          6273876841
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ACCOUNT_SITES_BILL_TO_FK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 687,
+        "missing_count": "0",
+        "sample_values": [
+          2969030063,
+          2969030063,
+          2969030063,
+          2969030063,
+          2969030063
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ACCOUNT_SITES_HST_SHIP_TO_FK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 726,
+        "missing_count": "0",
+        "sample_values": [
+          6273876841,
+          6273876841,
+          6273876841,
+          6273876841,
+          6273876841
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ACCOUNT_SITES_HST_BILL_TO_FK": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 687,
+        "missing_count": "0",
+        "sample_values": [
+          2969030063,
+          2969030063,
+          2969030063,
+          2969030063,
+          2969030063
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "BILLTO_CUR_CUST_ACCT_SITE_ID": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 687,
+        "missing_count": "0",
+        "sample_values": [
+          13365013275,
+          13365013275,
+          13365013275,
+          13365013275,
+          13365013275
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "SHIPTO_CUR_CUST_ACCT_SITE_ID": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 726,
+        "missing_count": "0",
+        "sample_values": [
+          13370808441,
+          13370808441,
+          13370808441,
+          13370808441,
+          13370808441
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "SERVICE_ITEM_ID": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(6) field",
+      "metadata": {
+        "inferred_type": "cat_int(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          11528433,
+          11528433,
+          11528433,
+          11528433,
+          11528433
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "LINE_ID": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(29580) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(29580)",
+        "unique_count": 29580,
+        "missing_count": "0",
+        "sample_values": [
+          337138269880069920317238388284921515710,
+          337138269879072556516056319215788920510,
+          337138269879458203852513385922520190654,
+          337138269879405011116450342238833118910,
+          112244799645463268983421948127087738301
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "LINE_STATUS": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "TERMINATED",
+          "TERMINATED",
+          "TERMINATED",
+          "TERMINATED",
+          "ACTIVE"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "LINE_STYLE": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(4) field",
+      "metadata": {
+        "inferred_type": "cat_int(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "LINE_START_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 384,
+        "missing_count": "0",
+        "sample_values": [
+          "2022-04-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-04-01 00:00:00",
+          "2022-04-01 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "LINE_END_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 482,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-04-30 00:00:00",
+          "2024-04-30 00:00:00",
+          "2025-04-30 00:00:00",
+          "2025-04-30 00:00:00",
+          "2026-04-30 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "DATE_TERMINATED": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 14238 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 339,
+        "missing_count": "14238",
+        "sample_values": [
+          "2024-04-30 00:00:00",
+          "2023-03-31 00:00:00",
+          "2024-04-30 00:00:00",
+          "2024-04-30 00:00:00",
+          "2023-03-31 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "COVERAGE_NAME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(4) field with 4 missing values",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "4",
+        "sample_values": [
+          "Software Support",
+          "Software Support",
+          "Software Support",
+          "Software Support",
+          "Software Support"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COVERAGE_DESCRIPTION": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(4) field with 4 missing values",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "4",
+        "sample_values": [
+          "Subscription Coverage - No Business Process attached",
+          "Subscription Coverage - No Business Process attached",
+          "Subscription Coverage - No Business Process attached",
+          "Subscription Coverage - No Business Process attached",
+          "Subscription Coverage - No Business Process attached"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "LAST_UPDATE_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1073,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-04-30 22:49:50",
+          "2023-04-12 22:49:35",
+          "2024-04-30 22:49:50",
+          "2024-04-30 22:49:50",
+          "2025-04-08 22:51:01"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "CREATION_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1377,
+        "missing_count": "0",
+        "sample_values": [
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2025-04-08 22:51:01"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "OKL_CREATION_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 4512,
+        "missing_count": "0",
+        "sample_values": [
+          "2022-03-31 05:09:04",
+          "2022-03-31 05:09:02",
+          "2022-03-31 05:09:03",
+          "2022-03-31 05:09:03",
+          "2025-04-08 21:31:40"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "OKL_LAST_UPDATE_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 2976,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-04-30 18:36:15",
+          "2023-04-12 22:07:06",
+          "2024-04-30 18:36:15",
+          "2024-04-30 18:36:15",
+          "2025-04-08 21:31:41"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "OKL_LAST_UPDATED_BY": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 139,
+        "missing_count": "0",
+        "sample_values": [
+          556492,
+          556492,
+          556492,
+          556492,
+          556492
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CREATED_BY": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 1377,
+        "missing_count": "0",
+        "sample_values": [
+          795239213,
+          795239213,
+          795239213,
+          795239213,
+          985350229
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "LAST_UPDATED_BY": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 941,
+        "missing_count": "0",
+        "sample_values": [
+          929560827,
+          859702991,
+          929560827,
+          929560827,
+          985350229
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ATTRIBUTE1": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "PRICE_TIER": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 31737 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "31737",
+        "sample_values": [
+          "(0-999999999999)*.0082",
+          "(0-999999999999)*.05",
+          "(0-999999999999)*.05",
+          "(0-999999999999)*.0082"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "QUERY5_FLAG": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "INCLUDED_COPIES": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_int(1) field with 31737 missing values",
+      "metadata": {
+        "inferred_type": "cat_int(1)",
+        "unique_count": 1,
+        "missing_count": "31737",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "USAGE_OVERAGE_RATE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 31737 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 2,
+        "missing_count": "31737",
+        "sample_values": [
+          0.0082,
+          0.05,
+          0.05,
+          0.0082
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "LINE_TERM_CODE": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(14) field with 14238 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(14)",
+        "unique_count": 14,
+        "missing_count": "14238",
+        "sample_values": [
+          "SWREN",
+          "SWREN",
+          "SWREN",
+          "SWREN",
+          "SWREN"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTRACT_NEXT_BILL_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 31737 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 2,
+        "missing_count": "31737",
+        "sample_values": [
+          "2025-08-01 00:00:00",
+          "2025-01-01 00:00:00",
+          "2025-08-01 00:00:00",
+          "2025-01-01 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "BILL_LAST_UPDATE_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1378,
+        "missing_count": "0",
+        "sample_values": [
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2022-03-31 22:50:12",
+          "2025-04-08 22:51:01"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "COVERAGE_ID": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(818) field with 4 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(818)",
+        "unique_count": 818,
+        "missing_count": "4",
+        "sample_values": [
+          364705644512327911866520479840027420804,
+          364705644512327911866520479840027420804,
+          364705644512327911866520479840027420804,
+          364705644512327911866520479840027420804,
+          364705644512327911866520479840027420804
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "ATTRIBUTE2": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE3": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE4": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE5": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE6": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE7": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE8": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE9": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE10": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE11": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE12": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE13": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE14": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE15": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 31741 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "31741",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "HVR_DELETE_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(1) field",
+      "metadata": {
+        "inferred_type": "cat_int(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "HVR_ARCHIVE_FLAG": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "HVR_LAST_TIMESTAMP": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 110,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-01-06 05:26:37",
+          "2025-01-06 05:26:37",
+          "2025-01-06 05:26:37",
+          "2025-01-06 05:26:37",
+          "2025-04-09 02:51:09"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "LINE_NUMBER": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 20564 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 1009,
+        "missing_count": "20564",
+        "sample_values": [
+          122,
+          47,
+          76,
+          72,
+          129
+        ],
+        "actual_dtype": "int"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_CONTRACT_TOPLINE table",
+  "created_at": "2025-08-13T13:50:02.626591"
+}

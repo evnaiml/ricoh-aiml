@@ -1,0 +1,58 @@
+# -----------------------------------------------------------------------------
+# * Pydantic Schema Path Configuration
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-08-13
+# * CREATED ON: 2025-08-13
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+# Schema path configuration for DOCUWARE product
+schema_paths:
+  DOCUWARE:
+    # Base directory for all DOCUWARE schemas (relative to project root)
+    base_dir: "data/products/DOCUWARE/DB/snowflake/csv"
+    
+    # Schema search paths in order of priority
+    search_paths:
+      # For tables with join rules applied
+      join_rules: "join_rules"
+      
+      # For raw tables without rules
+      raw: "raw"
+    
+    # Default schema file naming pattern
+    schema_name_pattern: "{table_name}_schema.json"
+    
+    # Fallback paths if schema not found in primary locations
+    fallback_paths:
+      - "."  # Current directory
+      - "schemas"  # Local schemas directory
+    
+    # Settings for schema resolution
+    resolution:
+      # Try to auto-detect whether to use raw or join_rules based on context
+      auto_detect: true
+      
+      # Default to this path type if auto-detection fails
+      default_type: "raw"
+      
+      # Enable caching of schema paths for performance
+      cache_paths: true
+
+  # Global settings for all products
+  global:
+    # Enable verbose logging for schema path resolution
+    verbose_logging: false
+    
+    # Raise error if schema not found
+    raise_on_missing: true
+    
+    # Allow custom schema path override via environment variable
+    env_override: "PYDANTIC_SCHEMA_PATH"

@@ -1,0 +1,5 @@
+{
+    "CUST_ACCOUNT_NUMBER": "int64",
+    "YYYYWK": "int64",
+    "CHURNED_FLAG": "string"
+}

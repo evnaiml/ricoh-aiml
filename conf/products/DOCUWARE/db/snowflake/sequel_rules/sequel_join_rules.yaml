@@ -1,0 +1,152 @@
+# -----------------------------------------------------------------------------
+# * Sequel Join Rules Configuration:
+# * Author: Justin Bovard
+# * Email: Justin.Bovard@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-08-04
+# * CREATED ON: 2025-08-04
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+# SQL queries for creating joined datasets
+queries:
+  usage_latest:
+    description: "Combined usage data with customer matching using Jaro-Winkler similarity"
+    sql: |
+      WITH latback AS (
+          SELECT DISTINCT CONTRACT_NUMBER,
+                 REGEXP_REPLACE(trim(CUSTOMER_NAME), '  ', ' ') AS CUSTOMER_NAME,
+                 CONTRACT_START,
+                 CONTRACT_END,
+                 DOCUMENTS_OPENED,
+                 USED_STORAGE__MB,
+                 CONTRACT_LINE_ITEMS,
+                 PERIOD,
+                 YYYYWK
+          FROM RUS_AIML.DOCUWARE_USAGE_COMBINED_V
+      ),
+      jaro AS (
+          SELECT DISTINCT a.CUST_ACCOUNT_NUMBER,
+                 a.churn_date,
+                 a.churned_flag,
+                 b.CONTRACT_NUMBER,
+                 a.CUST_PARTY_NAME,
+                 b.CUSTOMER_NAME,
+                 b.CONTRACT_START,
+                 b.CONTRACT_END,
+                 b.DOCUMENTS_OPENED,
+                 b.USED_STORAGE__MB,
+                 b.CONTRACT_LINE_ITEMS,
+                 b.PERIOD,
+                 b.YYYYWK,
+                 jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME),
+                 rank() OVER (
+                     PARTITION BY a.CUST_ACCOUNT_NUMBER
+                     ORDER BY jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME) DESC
+                 ) AS match_rank
+          FROM RUS_AIML.PS_DOCUWARE_CUST_FINAL a
+          FULL OUTER JOIN latback b
+          WHERE jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME) BETWEEN 93 AND 100
+      )
+      SELECT *
+      FROM jaro
+      WHERE jaro.match_rank = 1
+    output_name: "usage_latest"
+    limit_default: null
+
+  churned_first_week:
+    description: "Get the first week (minimum YYYYWK) for churned customers"
+    sql: |
+      WITH fi(CUST_ACCOUNT_NUMBER, YYYYWK) AS(
+          SELECT CUST_ACCOUNT_NUMBER, min(YYYYWK) AS YY
+          FROM RUS_AIML.DOCUWARE_USAGE_JAPAN_V1_LATEST_V
+          GROUP BY(CUST_ACCOUNT_NUMBER)
+      )
+      SELECT a.CUST_ACCOUNT_NUMBER, a.YYYYWK
+      FROM fi a
+      JOIN RUS_AIML.PS_DOCUWARE_L1_CUST b
+      ON a.CUST_ACCOUNT_NUMBER = b.CUST_ACCOUNT_NUMBER
+      WHERE b.CHURNED_FLAG='Y'
+    output_name: "churned_first_week"
+    limit_default: null
+
+  # DEPRECATED - use usage_latest and filter in Python to avoid duplicate queries
+  active_customers_usage:
+    description: "[DEPRECATED] Combined usage data for active customers - use usage_latest and filter in Python instead"
+    sql: |
+      WITH latback AS (
+          SELECT DISTINCT CONTRACT_NUMBER,
+                 REGEXP_REPLACE(trim(CUSTOMER_NAME), '  ', ' ') AS CUSTOMER_NAME,
+                 CONTRACT_START,
+                 CONTRACT_END,
+                 DOCUMENTS_OPENED,
+                 USED_STORAGE__MB,
+                 CONTRACT_LINE_ITEMS,
+                 PERIOD,
+                 YYYYWK
+          FROM RUS_AIML.DOCUWARE_USAGE_COMBINED_V
+      ),
+      jaro AS (
+          SELECT DISTINCT a.CUST_ACCOUNT_NUMBER,
+                 a.churn_date,
+                 a.churned_flag,
+                 b.CONTRACT_NUMBER,
+                 a.CUST_PARTY_NAME,
+                 b.CUSTOMER_NAME,
+                 b.CONTRACT_START,
+                 b.CONTRACT_END,
+                 b.DOCUMENTS_OPENED,
+                 b.USED_STORAGE__MB,
+                 b.CONTRACT_LINE_ITEMS,
+                 b.PERIOD,
+                 b.YYYYWK,
+                 jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME),
+                 rank() OVER (
+                     PARTITION BY a.CUST_ACCOUNT_NUMBER
+                     ORDER BY jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME) DESC
+                 ) AS match_rank
+          FROM RUS_AIML.PS_DOCUWARE_CUST_FINAL a
+          FULL OUTER JOIN latback b
+          WHERE jarowinkler_similarity(a.CUST_PARTY_NAME, b.CUSTOMER_NAME) BETWEEN 93 AND 100
+            AND a.churned_flag = 'N'
+      )
+      SELECT *
+      FROM jaro
+      WHERE jaro.match_rank = 1
+    output_name: "active_customers_usage"
+    limit_default: null
+
+  all_customers_first_week:
+    description: "Get the first week (minimum YYYYWK) for ALL customers"
+    sql: |
+      WITH fi(CUST_ACCOUNT_NUMBER, YYYYWK) AS(
+          SELECT CUST_ACCOUNT_NUMBER, min(YYYYWK) AS YY
+          FROM RUS_AIML.DOCUWARE_USAGE_JAPAN_V1_LATEST_V
+          GROUP BY(CUST_ACCOUNT_NUMBER)
+      )
+      SELECT a.CUST_ACCOUNT_NUMBER, a.YYYYWK, b.CHURNED_FLAG
+      FROM fi a
+      JOIN RUS_AIML.PS_DOCUWARE_L1_CUST b
+      ON a.CUST_ACCOUNT_NUMBER = b.CUST_ACCOUNT_NUMBER
+    output_name: "all_customers_first_week"
+    limit_default: null
+    
+  # DEPRECATED - use all_customers_first_week and filter in Python
+  active_first_week:
+    description: "[DEPRECATED] Get the first week (minimum YYYYWK) for active customers - use all_customers_first_week instead"
+    sql: |
+      WITH fi(CUST_ACCOUNT_NUMBER, YYYYWK) AS(
+          SELECT CUST_ACCOUNT_NUMBER, min(YYYYWK) AS YY
+          FROM RUS_AIML.DOCUWARE_USAGE_JAPAN_V1_LATEST_V
+          GROUP BY(CUST_ACCOUNT_NUMBER)
+      )
+      SELECT a.CUST_ACCOUNT_NUMBER, a.YYYYWK
+      FROM fi a
+      JOIN RUS_AIML.PS_DOCUWARE_L1_CUST b
+      ON a.CUST_ACCOUNT_NUMBER = b.CUST_ACCOUNT_NUMBER
+      WHERE b.CHURNED_FLAG='N'
+    output_name: "active_first_week"
+    limit_default: null

@@ -1,0 +1,67 @@
+# -----------------------------------------------------------------------------
+# * Pydantic Data Validation Configuration
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-07-31
+# * CREATED ON: 2025-07-31
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+pydantic_settings:
+  # Data type classification thresholds
+  type_classification:
+    categorical_max_unique: 10  # <= 10 unique values = categorical
+    binary_unique_count: 2      # exactly 2 unique values = binary
+    high_cardinality_threshold: 10  # > 10 unique values = high cardinality categorical
+
+  # Missing value thresholds
+  missing_values:
+    role_threshold: 0.5  # 50% missing = role 0, otherwise role 1
+
+  # Sample settings
+  sample_settings:
+    sample_size: 10
+    include_nan: true
+    random_seed: 42
+
+  # Data type inference
+  type_inference:
+    strict_mode: false
+    coerce_numeric: true
+    parse_dates: false
+
+  # Validation settings
+  validation:
+    validate_on_assignment: true
+    extra: "allow"  # allow extra fields
+
+  # Report formatting
+  report_format:
+    feature_columns: ["feature_name", "dtype", "role", "missing", "sample", "table_name"]
+    missing_format: "{count} ({percentage:.1f}%)"
+    datetime_format: "%Y-%m-%d %H:%M:%S"
+
+  # Schema generation settings
+  schema_generation:
+    generate_schemas: true
+    include_validation: true
+    schema_template_header: |
+      \"\"\"
+      Auto-generated Pydantic schema for {table_name}
+      Generated on: {timestamp}
+      \"\"\"
+      from typing import Optional, Union, Any
+      from pydantic import BaseModel, Field, validator
+      import pandas as pd
+      from datetime import datetime
+
+    validation_settings:
+      strict_mode: false
+      validate_assignment: true
+      extra: "forbid"

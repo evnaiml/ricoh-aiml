@@ -1,0 +1,25 @@
+{
+  "model_name": "ActiveFirstWeekModel",
+  "fields": {
+    "CUST_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "Customer account number",
+      "metadata": {
+        "inferred_type": "int",
+        "actual_dtype": "int"
+      }
+    },
+    "YYYYWK": {
+      "type": "int",
+      "required": true,
+      "description": "First week number for active customers",
+      "metadata": {
+        "inferred_type": "int",
+        "actual_dtype": "int"
+      }
+    }
+  },
+  "description": "Pydantic model for active customers first week query",
+  "created_at": "2025-08-18T17:37:00.000000"
+}

@@ -1,0 +1,15 @@
+Figure Generation Summary
+Generated at: 2025-08-18 18:13:58
+============================================================
+
+Data Statistics:
+  - Training records: 68,123
+  - New records: 0
+  - New data percentage: 0.0%
+
+Figures Generated (5):
+  - dataset_distribution_bar_20250818_181356.png
+  - overall_distribution_pie_20250818_181356.png
+  - segment_distribution_20250818_181356.png
+  - time_series_train_new_20250818_181356.png
+  - weekly_trend_20250818_181356.png

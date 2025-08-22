@@ -1,0 +1,44 @@
+# -----------------------------------------------------------------------------
+# * CSV Raw Data Output Configuration
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-07-31
+# * CREATED ON: 2025-07-31
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+csv_output:
+  # Base directory for CSV files (relative to project root found by ProjectRootFinder)
+  base_dir: "data/products/DOCUWARE/DB/snowflake/csv/raw"
+
+  # CSV file settings
+  settings:
+    index: false                    # Don't include row index
+    encoding: "utf-8"              # UTF-8 encoding
+    sep: ","                       # Comma separator
+    na_rep: ""                     # How to represent NaN values
+    float_format: "%.6f"           # Float precision
+    date_format: "%Y-%m-%d %H:%M:%S" # Date format
+
+  # Report settings
+  reports:
+    enabled: true
+    format: "csv"                  # Report format changed to CSV
+    include_sample_size: 10        # Number of sample values to show
+
+  # Pydantic schema settings
+  schemas:
+    enabled: true
+    format: "json"                 # Schema format (json/yaml)
+    validate_on_read: true         # Validate data when reading CSV
+
+  # Memory optimization for large datasets
+  optimization:
+    chunk_size: 10000              # Process data in chunks
+    max_memory_mb: 1024            # Maximum memory usage in MB

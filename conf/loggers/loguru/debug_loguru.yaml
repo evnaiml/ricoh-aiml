@@ -1,0 +1,19 @@
+# -----------------------------------------------------------------------------
+# * Simplified Debug Loguru configuration - No JSON/YAML file outputs
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-07-29
+# * CREATED ON: 2025-07-29
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# -----------------------------------------------------------------------------
+# @package loggers.loguru
+defaults:
+  - loguru  # Inherit from base config
+
+# Override for debug
+default_level: "DEBUG"
+console:
+  format: "<green>{time:HH:mm:ss.SSS}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> | <level>{message}</level>"

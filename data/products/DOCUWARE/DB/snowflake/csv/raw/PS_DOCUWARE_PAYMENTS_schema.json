@@ -1,0 +1,169 @@
+{
+  "model_name": "PS_DOCUWARE_PAYMENTSModel",
+  "fields": {
+    "CASH_RECEIPT_ID": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 3807,
+        "missing_count": "0",
+        "sample_values": [
+          33411129,
+          33411337,
+          33412045,
+          33412304,
+          33414220
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RECEIPT_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "CASH",
+          "CASH",
+          "CASH",
+          "CASH",
+          "CASH"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CURRENCY_CODE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "USD",
+          "USD",
+          "USD",
+          "USD",
+          "USD"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RECEIPT_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 757,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-03-12 00:00:00",
+          "2025-03-12 00:00:00",
+          "2025-03-12 00:00:00",
+          "2025-03-12 00:00:00",
+          "2025-03-13 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RECEIVED_FROM": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(440) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(440)",
+        "unique_count": 440,
+        "missing_count": "0",
+        "sample_values": [
+          "MINGLEDORFFS INC",
+          "LIONS CLUBS INTERNATIONAL FOUNDATION",
+          "WESTERN KENTUCKY UNIVERSITY",
+          "LEAGUE OF VOLUNTARY HOSP & HOMES OF NY",
+          "STRATIX SYSTEMS"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUSTOMER_NO": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(444) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(444)",
+        "unique_count": 444,
+        "missing_count": "0",
+        "sample_values": [
+          2108734,
+          37290634,
+          3307357,
+          13662969,
+          10402012
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "ENTERED_AMOUNT": {
+      "type": "float",
+      "required": true,
+      "description": "num field",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 2296,
+        "missing_count": "0",
+        "sample_values": [
+          6328.2,
+          75.95,
+          269.74,
+          299.41,
+          93833.44
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "FUNCTIONAL_AMOUNT": {
+      "type": "float",
+      "required": true,
+      "description": "num field",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 1779,
+        "missing_count": "0",
+        "sample_values": [
+          6328.2,
+          75.95,
+          269.74,
+          299.41,
+          853.2
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "PAYMENT_METHOD": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(14) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(14)",
+        "unique_count": 14,
+        "missing_count": "0",
+        "sample_values": [
+          "INTERFACED INA EFT",
+          "INTERFACED INA EFT",
+          "PNC-CHI",
+          "PNC-PHI",
+          "INTERFACED INA EFT"
+        ],
+        "actual_dtype": "str"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_PAYMENTS table",
+  "created_at": "2025-08-13T13:50:12.385283"
+}

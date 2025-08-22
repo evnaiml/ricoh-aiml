@@ -1,0 +1,270 @@
+{
+  "model_name": "DNB_RISK_BREAKDOWNModel",
+  "fields": {
+    "ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 88805,
+        "missing_count": "0",
+        "sample_values": [
+          40386719,
+          4670758,
+          4664808,
+          14887610,
+          9585008
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "BUSINESS_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(76451) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(76451)",
+        "unique_count": 76451,
+        "missing_count": "0",
+        "sample_values": [
+          "CENTER POINT CHURCH",
+          "Franklin Sports, Inc.",
+          "Quinn Bros. of Essex, Inc.",
+          "HP Hood LLC",
+          "C & K Components, LLC"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "STATE_OR_PROVINCE": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(53) field with 12 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(53)",
+        "unique_count": 53,
+        "missing_count": "12",
+        "sample_values": [
+          "TX",
+          "MA",
+          "MA",
+          "MA",
+          "MA"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "POSTAL_CODE": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(73482) field with 12 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(73482)",
+        "unique_count": 73482,
+        "missing_count": "12",
+        "sample_values": [
+          "76180 4656",
+          "02072 3703",
+          "01929 1102",
+          "01940 2685",
+          "02452 8428"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COUNTRY_OR_REGION": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "US",
+          "US",
+          "US",
+          "US",
+          "US"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DUNS_NUMBER": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(72957) field with 4413 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(72957)",
+        "unique_count": 72957,
+        "missing_count": "4413",
+        "sample_values": [
+          "00-100-2216",
+          "00-100-4035",
+          "00-100-4712",
+          "00-100-8697",
+          "00-100-9901"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COLLECTIONS_IND": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 72025 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "72025",
+        "sample_values": [
+          "yes",
+          "yes",
+          "yes",
+          "yes",
+          "yes"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RICOH_CUSTOM_RISK_MODEL": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 4553 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 1396,
+        "missing_count": "4553",
+        "sample_values": [
+          4.2,
+          7.74,
+          5.03,
+          7.48,
+          6.9
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "BANKRUPTCY_FOUND": {
+      "type": "Optional[bool]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 6 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "6",
+        "sample_values": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "actual_dtype": "bool"
+      }
+    },
+    "OUT_OF_BUSINESS_INDICATOR": {
+      "type": "Optional[bool]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 6 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "6",
+        "sample_values": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "actual_dtype": "bool"
+      }
+    },
+    "OVERALL_BUSINESS_RISK": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(8) field with 4805 missing values",
+      "metadata": {
+        "inferred_type": "cat(8)",
+        "unique_count": 8,
+        "missing_count": "4805",
+        "sample_values": [
+          "low",
+          "low-moderate",
+          "moderate",
+          "low-moderate",
+          "moderate-high"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "PAYMENT_RISK_TRIPLE_A_RATING": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(3) field with 4791 missing values",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "4791",
+        "sample_values": [
+          "Unavailable",
+          "Unavailable",
+          "Unavailable",
+          "Unavailable",
+          "Unavailable"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "PROBABILITY_OF_DELINQUENCY": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 10256 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 89,
+        "missing_count": "10256",
+        "sample_values": [
+          1.35,
+          2.24,
+          10.78,
+          1.24,
+          48.44
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "PROBABILITY_OF_FAILURE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 18130 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 65,
+        "missing_count": "18130",
+        "sample_values": [
+          0.1,
+          0.31,
+          0.13,
+          0.29,
+          1.35
+        ],
+        "actual_dtype": "float"
+      }
+    }
+  },
+  "description": "Pydantic model for DNB_RISK_BREAKDOWN table",
+  "created_at": "2025-08-13T13:49:56.004435"
+}

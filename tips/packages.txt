@@ -1,0 +1,67 @@
+conda create -n churn-ml-env    python=3.10 \
+                                tsfresh \
+                                watermark jupyter jupyterlab matplotlib \
+                                ipython \
+                                shap  \
+                                category_encoders \
+                                catboost xgboost  \
+                                scikit-optimize \
+                                hydra-core loguru pydantic \
+                                feature_engine \
+                                statsmodels \
+                                seaborn \
+                                -c conda-forge
+
+conda install -c rapidsai -c conda-forge -c nvidia dask-cuda
+conda install -c rapidsai -c nvidia -c conda-forge -c defaults cudf cupy
+
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+pip install "snowflake-snowpark-python[pandas]"
+
+conda env config vars set NUMBA_DISABLE_CUDA=1 # we need it for tsfresh only
+conda deactivate
+conda activate ml-gpu-env
+pip install --use-pep517 -e .
+
+sudo npm install -g @anthropic-ai/claude-code
+
+================= The above installation seems to be sufficient ==============
+---------------------------
+conda activate churn-ml-env
+conda env config vars set CUDA_VISIBLE_DEVICES=""
+abd back to
+conda env config vars unset CUDA_VISIBLE_DEVICES
+conda deactivate && conda activate churn-ml-env
+
+conda install -c conda-forge pandas numpy "scipy<1.15" scikit-learn
+
+pip install pywavelets
+pip install tsfresh
+python -c 'import tsfresh; print("✅ Clean install works!")'
+
+conda install watermark jupyter jupyterlab matplotlib ipython shap category_encoders catboost xgboost  scikit-optimize
+
+
+pip install "charset-normalizer==3.2.0" "chardet==5.2.0"
+
+
+
+
+----------------------------------------------------
+# Create fresh environment
+conda create -n ml-gpu-env python=3.10 -y
+conda activate ml-gpu-env
+
+# Install core packages
+conda install -c conda-forge \
+    "scipy<1.14.0" \
+    "tsfresh>=0.20.2" \
+    pandas numpy scikit-learn -y
+
+# Install CatBoost GPU version
+pip install catboost-gpu
+
+# Set numba to not use CUDA
+conda env config vars set NUMBA_DISABLE_CUDA=1
+conda deactivate
+conda activate ml-gpu-env

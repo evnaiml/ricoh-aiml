@@ -1,0 +1,266 @@
+{
+  "model_name": "PS_DOCUWARE_TRXModel",
+  "fields": {
+    "ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(472) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(472)",
+        "unique_count": 472,
+        "missing_count": "0",
+        "sample_values": [
+          3280365,
+          3280365,
+          3280365,
+          3280365,
+          3280365
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(26) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(26)",
+        "unique_count": 26,
+        "missing_count": "0",
+        "sample_values": [
+          "Inv-OKS Contracts",
+          "Inv-OKS Contracts",
+          "Inv-OKS Contracts",
+          "Inv-OKS Contracts",
+          "Inv-OKS Contracts"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUSTOMER_TRX_ID": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 4454,
+        "missing_count": "0",
+        "sample_values": [
+          510506569,
+          511754325,
+          512833755,
+          513840839,
+          514923387
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "TRX_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card(4454) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(4454)",
+        "unique_count": 4454,
+        "missing_count": "0",
+        "sample_values": [
+          5069051038,
+          5069223911,
+          5069387303,
+          5069562777,
+          5069713183
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "TRX_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 726,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-03-01 00:00:00",
+          "2024-04-01 00:00:00",
+          "2024-05-01 00:00:00",
+          "2024-06-01 00:00:00",
+          "2024-07-01 00:00:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "REASON_CODE": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(25) field with 4326 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(25)",
+        "unique_count": 25,
+        "missing_count": "4326",
+        "sample_values": [
+          "ICM0023",
+          "ICM0028",
+          "ICM0005",
+          "ICM0043",
+          "ICM0002"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SHIP_TO_CUSTOMER_ID": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 472,
+        "missing_count": "0",
+        "sample_values": [
+          1454976,
+          1454976,
+          1454976,
+          1454976,
+          1454976
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "PREVIOUS_CUSTOMER_TRX_ID": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 4336 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 119,
+        "missing_count": "4336",
+        "sample_values": [
+          494714022,
+          248355902,
+          490006708,
+          514391225,
+          510506588
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "COMMENTS": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(234) field with 2194 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(234)",
+        "unique_count": 234,
+        "missing_count": "2194",
+        "sample_values": [
+          "Regular Bill",
+          "Regular Bill",
+          "Regular Bill",
+          "Regular Bill",
+          "Regular Bill"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INTERNAL_NOTES": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(19) field with 4227 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "4227",
+        "sample_values": [
+          "ICM OM - Funding Adj",
+          "ICM OM - Funding Adj",
+          "ICM OM-Sales Tax Correction",
+          "ICM OM-Sales Tax Correction",
+          "ICM - Contract Termination"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE_CATEGORY": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(14) field with 3849 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(14)",
+        "unique_count": 14,
+        "missing_count": "3849",
+        "sample_values": [
+          "Equipment Sales",
+          "IOSC",
+          "Equipment Sales",
+          "Equipment Sales",
+          "Equipment Sales"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ATTRIBUTE2": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(117) field with 4309 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(117)",
+        "unique_count": 117,
+        "missing_count": "4309",
+        "sample_values": [
+          3863163,
+          3822929,
+          3822929,
+          3868933,
+          3879921
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "INTERFACE_HEADER_CONTEXT": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(5) field with 3 missing values",
+      "metadata": {
+        "inferred_type": "cat(5)",
+        "unique_count": 5,
+        "missing_count": "3",
+        "sample_values": [
+          "OKS CONTRACTS",
+          "OKS CONTRACTS",
+          "OKS CONTRACTS",
+          "OKS CONTRACTS",
+          "OKS CONTRACTS"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ORIGINAL_AMOUNT_DUE": {
+      "type": "float",
+      "required": true,
+      "description": "num field",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 1809,
+        "missing_count": "0",
+        "sample_values": [
+          640.5,
+          640.5,
+          640.5,
+          640.5,
+          640.5
+        ],
+        "actual_dtype": "float"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_TRX table",
+  "created_at": "2025-08-13T13:50:22.096826"
+}

@@ -1,0 +1,20 @@
+{
+  "total_processing_time_minutes": 0.10659760634104411,
+  "total_rows_processed": 262141,
+  "total_size_mb": 54.62503147125244,
+  "successful_queries": 1,
+  "failed_queries": 0,
+  "environment": "development",
+  "timestamp": "2025-08-04T18:18:25.915149",
+  "query_performance": [
+    {
+      "query": "usage_latest",
+      "rows": 262141,
+      "columns": 15,
+      "fetch_time": 3.239673376083374,
+      "total_time": 6.224388122558594,
+      "size_mb": 54.62503147125244,
+      "rows_per_second": 80915.87316648483
+    }
+  ]
+}

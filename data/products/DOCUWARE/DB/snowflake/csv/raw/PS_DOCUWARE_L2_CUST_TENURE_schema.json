@@ -1,0 +1,61 @@
+{
+  "model_name": "PS_DOCUWARE_L2_CUST_TENUREModel",
+  "fields": {
+    "L2_RISE_CONSOLIDATED_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(97005) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(97005)",
+        "unique_count": 97005,
+        "missing_count": "0",
+        "sample_values": [
+          "O-16172320",
+          "O-16170330",
+          "A-0013682056",
+          "O-16169342",
+          "O-16168343"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OLDEST_CREATION_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 41917,
+        "missing_count": "0",
+        "sample_values": [
+          "2013-12-10 08:46:25",
+          "2013-12-10 06:57:18",
+          "2013-12-09 18:29:47",
+          "2013-12-09 16:58:05",
+          "2013-12-09 14:35:37"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "ESTIMATED_TENURE_MONTHS": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 281,
+        "missing_count": "0",
+        "sample_values": [
+          141,
+          141,
+          141,
+          141,
+          141
+        ],
+        "actual_dtype": "int"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_L2_CUST_TENURE table",
+  "created_at": "2025-08-13T13:50:10.687177"
+}

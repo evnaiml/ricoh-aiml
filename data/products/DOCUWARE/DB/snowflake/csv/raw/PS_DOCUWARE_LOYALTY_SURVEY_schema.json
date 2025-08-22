@@ -1,0 +1,193 @@
+{
+  "model_name": "PS_DOCUWARE_LOYALTY_SURVEYModel",
+  "fields": {
+    "RECORDED_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 467,
+        "missing_count": "0",
+        "sample_values": [
+          "2022-11-15 00:00:00",
+          "2023-11-17 12:06:00",
+          "2023-06-26 12:18:00",
+          "2024-06-25 17:48:00",
+          "2023-03-15 13:09:00"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSEID": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(505) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(505)",
+        "unique_count": 505,
+        "missing_count": "0",
+        "sample_values": [
+          "R_6neUuohcnddSx33",
+          "R_1mw2wzq2KPTscUy",
+          "R_3parZHxleWZm415",
+          "R_3bZry5YF1INYSCi",
+          "R_2QyZ5hPW7dEKGUd"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RECIPIENTEMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(406) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(406)",
+        "unique_count": 406,
+        "missing_count": "0",
+        "sample_values": [
+          "gerald.thomas@rutgers.edu",
+          "bankheadv@scsk12.org",
+          "cfisch@email.arizona.edu",
+          "jware@dougherty.ga.us",
+          "stanlerl@milwaukee.k12.wi.us"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OVERALL_SATISFACTION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 36 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 11,
+        "missing_count": "36",
+        "sample_values": [
+          7,
+          6,
+          8,
+          8,
+          9
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "REPURCHASE": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "cat_int(10) field with 47 missing values",
+      "metadata": {
+        "inferred_type": "cat_int(10)",
+        "unique_count": 10,
+        "missing_count": "47",
+        "sample_values": [
+          8,
+          4,
+          5,
+          5,
+          8
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RECOMMEND": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 49 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 11,
+        "missing_count": "49",
+        "sample_values": [
+          8,
+          7,
+          9,
+          8,
+          9
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "ACCOUNT_NUMBER": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(298) field with 11 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(298)",
+        "unique_count": 298,
+        "missing_count": "11",
+        "sample_values": [
+          "RUTGERS UNIVERSITY",
+          "A-0009645855",
+          "A-1000452369",
+          "A-0013161645",
+          "A-0003348000"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ACCOUNT_NAME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(176) field with 91 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(176)",
+        "unique_count": 176,
+        "missing_count": "91",
+        "sample_values": [
+          "A-0012733588",
+          "UNIVERSITY OF ARIZONA",
+          "DOUGHERTY COUNTY  COMMISSION",
+          "MILWAUKEE PUBLIC SCHOOLS",
+          "FERGUSON ENTERPRISES"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ORC_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 131,
+        "missing_count": "0",
+        "sample_values": [
+          4665518,
+          2082716,
+          3949082,
+          2106654,
+          13669627
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CLI": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(5) field with 56 missing values",
+      "metadata": {
+        "inferred_type": "cat(5)",
+        "unique_count": 5,
+        "missing_count": "56",
+        "sample_values": [
+          "Loyal",
+          "Neutral",
+          "Loyal",
+          "Loyal",
+          "Loyal"
+        ],
+        "actual_dtype": "str"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_LOYALTY_SURVEY table",
+  "created_at": "2025-08-13T13:50:11.565060"
+}

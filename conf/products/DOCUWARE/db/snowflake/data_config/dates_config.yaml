@@ -1,0 +1,69 @@
+# -----------------------------------------------------------------------------
+# * Date Configuration for DOCUWARE Churn Analysis
+# * This configuration defines important dates for data filtering and visualization
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Email: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-08-19
+# * CREATED ON: 2025-08-19
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+
+# Analysis start date - only consider contracts starting on or after this date
+# Based on refactored.py: usage_latest[usage_latest['CONTRACT_START']>= '2020-01-01']
+analysis_start_date: "2020-01-01"
+
+# Data update dates - when the data was refreshed/updated in the system
+# These dates will be shown as vertical lines in time series visualizations
+data_update_dates:
+  - date: "2025-07-02"
+    label: "July Update"
+    description: "Q3 2025 data refresh"
+
+  - date: "2025-08-04"
+    label: "August Update"
+    description: "Mid-Q3 2025 data refresh"
+
+  - date: "2025-08-19"
+    label: "Latest Update"
+    description: "Latest data refresh"
+
+  # Add future update dates here as they occur
+  # Example format:
+  # - date: "2025-09-01"
+  #   label: "September Update"
+  #   description: "Q4 2025 data refresh"
+
+# Visualization settings for update date markers
+update_markers:
+  line_style: "--"  # Dashed line
+  line_color: "gray"
+  line_width: 1.5
+  alpha: 0.7
+  text_rotation: 90  # Vertical text
+  text_fontsize: 9
+  text_color: "darkred"
+  show_label: false  # Don't show text labels to avoid crowding
+  show_date: false   # Don't show dates on plots
+
+# Date format settings
+date_formats:
+  display: "%Y-%m-%d"
+  input: "%Y-%m-%d"
+  plot_label: "%b %d, %Y"  # e.g., "Jul 02, 2025"
+
+# Cutoff dates for different analyses (optional, for future use)
+cutoff_dates:
+  training_data_end: "2025-06-30"  # End date for training data
+  validation_start: "2025-07-01"   # Start date for validation
+
+# Filter settings
+filters:
+  apply_start_date_filter: true
+  exclude_incomplete_contracts: true
+  minimum_contract_duration_days: 30

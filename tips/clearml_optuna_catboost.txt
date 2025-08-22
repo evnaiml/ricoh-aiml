@@ -1,0 +1,32 @@
+
+Catboost
+https://clear.ml/docs/latest/docs/integrations/catboost/
+
+https://medium.com/@meenu.archana/clearml-modern-mlops-made-simple-e29375fe2db5
+
+The ClearML platform allows you to orchestrate and manage hyperparameter optimization tasks, including distributed training across multiple GPUs. This example combines Optuna for hyperparameter optimization and CatBoost for model training. 
+
+1. Prerequisites
+ClearML Account and Server: You'll need a ClearML server to track your experiments and a configured ClearML client (installed with pip install clearml, and initialized with clearml-init).
+ClearML Agent: You'll need a ClearML Agent configured to listen on a queue for your GPU-accelerated tasks. The agent needs to be configured to handle multiple GPUs. For instance, to allocate 4 GPUs, you could use a command like: clearml-agent daemon --gpus 0,1,2,3 --queue my_gpu_queue --docker.
+Optuna and CatBoost: Install these libraries: pip install optuna catboost 
+
+2. Python script (e.g., gpu_catboost_optuna.py)
+A script using ClearML, Optuna, and CatBoost for hyperparameter optimization on multiple GPUs can be found at optuna-examples and ClearML. The script initializes a ClearML Task and defines an Optuna objective function. This function trains a CatBoost model with suggested hyperparameters, specifying task_type="GPU" and devices='0,1,2,3' to utilize 4 GPUs, and includes an Optuna pruning callback. 
+ClearML's HyperParameterOptimizer is configured using a template task, defining the search space, specifying Optuna as the optimizer, directing tasks to a specific queue, and setting the maximum number of concurrent tasks to 4 for parallel execution on the available GPUs. 
+
+3. Explanation and Orchestration
+The script sets up a ClearML Task and an Optuna objective function for training a CatBoost model on the breast cancer dataset, configured to use 4 GPUs via task_type="GPU" and devices='0,1,2,3'. It incorporates an Optuna pruning callback for early stopping. 
+ClearML's HyperParameterOptimizer manages the process, using a template_task, defining hyperparameter ranges, specifying Optuna as the optimizer, using a designated execution queue, and setting max_number_of_concurrent_tasks to 4 for parallel trials. The clearml-agent on the configured machine handles picking up and executing these tasks. 
+
+4. Execution
+Run the script: python gpu_catboost_optuna.py
+
+Monitor in ClearML UI: The ClearML UI displays the optimization task and its sub-tasks (trials) running on the GPUs.
+
+Analyze Results: After completion, the best experiment's details are printed, and results can be reviewed in the ClearML UI. 
+
+This outlines a basic example of GPU orchestration with ClearML, Optuna, and CatBoost. Further customization can include more advanced features from these libraries or ClearML's data management tools. 
+Hyperparameter Optimization - ClearML
+
+You can automate and boost hyperparameter optimization (HPO) with ClearML's HyperParameterOptimizer class, which takes 

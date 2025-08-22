@@ -1,0 +1,282 @@
+{
+  "model_name": "active_customers_usageModel",
+  "fields": {
+    "CUST_ACCOUNT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card field",
+      "metadata": {
+        "inferred_type": "cat_high_card",
+        "unique_count": 414,
+        "missing_count": "0",
+        "sample_values": [
+          2122950,
+          2122950,
+          2122950,
+          2122950,
+          3303851
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "CHURN_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 96,
+        "missing_count": "224077",
+        "sample_values": [
+          "2023-09-14",
+          "2023-09-14",
+          "2023-09-14",
+          "2023-09-14",
+          "2023-09-14"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "CHURNED_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=churned (Y/True), 0=not churned (N/False)",
+      "validator": "bool_to_int",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "N",
+          "N",
+          "N",
+          "N",
+          "N"
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      }
+    },
+    "CONTRACT_NUMBER": {
+      "type": "int",
+      "required": true,
+      "description": "int field",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 427,
+        "missing_count": "0",
+        "sample_values": [
+          817268,
+          817268,
+          817268,
+          817268,
+          817671
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CUST_PARTY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card field",
+      "metadata": {
+        "inferred_type": "cat_high_card",
+        "unique_count": 411,
+        "missing_count": "0",
+        "sample_values": [
+          "SAN BENITO ISD",
+          "SAN BENITO ISD",
+          "SAN BENITO ISD",
+          "SAN BENITO ISD",
+          "FLINT COMMUNITY SCHOOLS"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CUSTOMER_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card field",
+      "metadata": {
+        "inferred_type": "cat_high_card",
+        "unique_count": 410,
+        "missing_count": "0",
+        "sample_values": [
+          "San Benito ISD",
+          "San Benito ISD",
+          "San Benito ISD",
+          "San Benito ISD",
+          "Flint Community Schools"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTRACT_START": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 120,
+        "missing_count": "0",
+        "sample_values": [
+          "2023-12-31",
+          "2024-01-01",
+          "2023-12-31",
+          "2023-12-31",
+          "2024-04-01"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "CONTRACT_END": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 99,
+        "missing_count": "0",
+        "sample_values": [
+          "2024-12-31",
+          "2024-12-31",
+          "2024-12-31",
+          "2024-12-31",
+          "2025-03-31"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "DOCUMENTS_OPENED": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 4993,
+        "missing_count": "63089",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "USED_STORAGE__MB": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 17541,
+        "missing_count": "83669",
+        "sample_values": [
+          77,
+          77,
+          77,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CONTRACT_LINE_ITEMS": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card field",
+      "metadata": {
+        "inferred_type": "cat_high_card",
+        "unique_count": 1523,
+        "missing_count": "0",
+        "sample_values": [
+          "1x DocuWare Cloud 4",
+          "1x DocuWare Cloud 4",
+          "1x DocuWare Cloud 4",
+          "1x DocuWare Cloud 4",
+          "1x DocuWare Cloud 4, 2x DocuWare Cloud 4: Additional Storage"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "PERIOD": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 64,
+        "missing_count": "0",
+        "sample_values": [
+          "2021-11-01",
+          "2024-07-01",
+          "2020-12-01",
+          "2024-08-01",
+          "2022-03-01"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "YYYYWK": {
+      "type": "int",
+      "required": true,
+      "description": "cat_high_card field",
+      "metadata": {
+        "inferred_type": "cat_high_card",
+        "unique_count": 268,
+        "missing_count": "0",
+        "sample_values": [
+          202146,
+          202428,
+          202053,
+          202432,
+          202213
+        ],
+        "actual_dtype": "inferred_int"
+      }
+    },
+    "JAROWINKLER_SIMILARITY(A.CUST_PARTY_NAME, B.CUSTOMER_NAME)": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int field",
+      "metadata": {
+        "inferred_type": "cat_int",
+        "unique_count": 8,
+        "missing_count": "0",
+        "sample_values": [
+          100,
+          100,
+          100,
+          100,
+          100
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "MATCH_RANK": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int field",
+      "metadata": {
+        "inferred_type": "cat_int",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "actual_dtype": "int"
+      }
+    }
+  },
+  "description": "Pydantic model for active_customers_usage table",
+  "created_at": "2025-08-18T17:27:00.000000"
+}

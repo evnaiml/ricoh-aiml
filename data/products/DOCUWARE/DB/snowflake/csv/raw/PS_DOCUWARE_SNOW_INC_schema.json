@@ -1,0 +1,2768 @@
+{
+  "model_name": "PS_DOCUWARE_SNOW_INCModel",
+  "fields": {
+    "NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(287) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(287)",
+        "unique_count": 287,
+        "missing_count": "0",
+        "sample_values": [
+          "WILCO FARMERS-17370443",
+          "COTERRA ENERGY INC-37534604",
+          "Dairy Farmers Of America Inc",
+          "MANPOWER-2020207",
+          "MANPOWER-2020207"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "U_R12_ACCOUNT_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(272) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(272)",
+        "unique_count": 272,
+        "missing_count": "0",
+        "sample_values": [
+          "17370443",
+          "37534604",
+          "36915621",
+          "2020207",
+          "2020207"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "U_R12_PARTY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(265) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(265)",
+        "unique_count": 265,
+        "missing_count": "0",
+        "sample_values": [
+          "WILCO FARMERS",
+          "COTERRA ENERGY INC",
+          "Dairy Farmers Of America Inc",
+          "MANPOWER",
+          "MANPOWER"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1169) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1169)",
+        "unique_count": 1169,
+        "missing_count": "0",
+        "sample_values": [
+          "INC0015171625",
+          "INC0015178360",
+          "INC0015188568",
+          "INC0015192562",
+          "INC0015195032"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ACTIVE": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=true (Y/True), 0=false (N/False)",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      },
+      "validator": "bool_to_int"
+    },
+    "APPROVAL": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "not requested",
+          "not requested",
+          "not requested",
+          "not requested",
+          "not requested"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INCIDENT_CATEGORY": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CHILD_INCIDENTS": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(9) field",
+      "metadata": {
+        "inferred_type": "cat_int(9)",
+        "unique_count": 9,
+        "missing_count": "0",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "CLOSE_CODE": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(19) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(19)",
+        "unique_count": 19,
+        "missing_count": "0",
+        "sample_values": [
+          "Solved Remotely (Permanently)",
+          "Solved Remotely (Permanently)",
+          "Solved Remotely (Permanently)",
+          "Solved Remotely (Permanently)",
+          "Duplicate"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSE_NOTES": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(949) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(949)",
+        "unique_count": 949,
+        "missing_count": "0",
+        "sample_values": [
+          "recommended reboot and to monitor AutoIndex log",
+          "document data can only be exported from documents in a cabinet, not from a tray",
+          "provided download link to printer ps\r\nShe will have IT help load",
+          "tls 1.2 is not only supported but required.",
+          "dupe to INC0015192562"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_AT": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 22 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1140,
+        "missing_count": "22",
+        "sample_values": [
+          "2025-06-06 18:02:13",
+          "2025-06-09 18:00:26",
+          "2025-06-11 19:01:17",
+          "2025-06-12 22:00:49",
+          "2025-06-12 20:02:14"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "COMMENTS_AND_WORK_NOTES": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTACT_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(11) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(11)",
+        "unique_count": 11,
+        "missing_count": "0",
+        "sample_values": [
+          "phone",
+          "phone",
+          "email",
+          "phone",
+          "email"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONTRACT": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DESCRIPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1091) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1091)",
+        "unique_count": 1091,
+        "missing_count": "0",
+        "sample_values": [
+          "Auto index running slow\r\n\r\nSteven Dickey, Business Applications Specialist\r\nWilco\r\n200 Industrial Way | Mt Angel, OR 97362\r\nPhone 503.854.7016\r\nsteven.dickey@wilco.coop | ",
+          "can document data from a tray be exported to xls like indexed data can.\r\n(281) 589-4857\r\n904026 number of the software",
+          "Eloqua Notification System\nYour personal notification of activity on your website. Target prospects, identify visitors, and develop sales relationships with your online visitors.\n\n=============================\n| General Details\n=============================\nFirst Name=\nLast Name=\nEmail Address=\nCompany=\nPages Viewed=\nSubmit Time=6/6/2025 1:37:08 PM\nForm Name=internalCustomerSupport\nURL Of Form=\n\n\n=============================\n| Data Provided in Form\n=============================\nFirst Name=Jillian\nLast Name=Ferris\nYour Company (optional)=Dairy Farmers of America\nJob Title (optional)=\nEmail Address=Jillian.Ferris@dfamilk.com\nPhone=6072525545\nExtension (optional)=\nAddress (optional)=5001 Brittonfield Parkway\nCity (optional)=East Syracuse\nState=NY\nZip Code=13057\nSelect the reason for your inquiry=Technical Support (Software)\nPlease let us know how we can help you=Help needed for Jillian Ferris for setting up DocuWare Printer PS.  The customer name is Dairy Farmers of America and the DFA account number is 13658223.  ",
+          "is tls 1.2 supported ( ProC5310S )",
+          "From: William Seawall <william.seawall@manpowergroup.com>\nSent: Monday, June 9, 2025 12:11 PM\nTo: solutions@ricoh-usa.com\nCc: Lakesha Pittman <lakesha.pittman@manpowergroup.com>\nSubject: URGENT - RE: [COMMENTS ADDED] - Incident INC0015192562 - is tls 1.2 supported ( ProC5310S )\nImportance: High\n\nHello,\n\nThank you for the reply and the documentation.\n\nWith that said, my IT team is wanting to find out if DocuWare is compatible with TLS 1.2 or if is not.\n\nThey have told us\u2026.\n\n\nWe have received TLS/SSL vulnerability on server that hosts/runs our DocuWare and as part of the remediation, they are looking to disable SSL 1.2/1.3 and TLS 1.0/1.1 and enable TLS 1.2 on server.\n\nIf you can provide this confirmation (that TLS1.2 is compatible) would be helpful.\n\nThanks,\n\nWill\n\n[cid:image002.jpg@01DBD937.373042E0]\n\n\n[cid:image003.png@01DBD937.373042E0]\nWilliam Seawall\nVendor Management Specialist\nNorth America Real Estate<https://urldefense.com/v3/__https://intranetapps.manpower.com/nai/index.jsp?id=14118__;!!Iq1d47XejX0!ksnn_dtmVkEc4P2x44DJPgNKSTlVzddY2-MAhRmhKTgLgUVvIrh5qxUTwtMaXc7KqFtqGPn0wWgFoYXdWzUKOu0Kt3nKLUCEzEQ$ >\n\nManpowerGroup\n100 Manpower Place\nMilwaukee, WI 53212\nT:\n+1 414 906 6241\n\n\nwilliam.seawall@manpowergroup.com<mailto:william.seawall@manpowergroup.com>\nhttps://urldefense.com/v3/__http://www.manpowergroup.com__;!!Iq1d47XejX0!ksnn_dtmVkEc4P2x44DJPgNKSTlVzddY2-MAhRmhKTgLgUVvIrh5qxUTwtMaXc7KqFtqGPn0wWgFoYXdWzUKOu0Kt3nKqwsNe5E$ <https://urldefense.com/v3/__http://www.manpowergroup.com/__;!!Iq1d47XejX0!ksnn_dtmVkEc4P2x44DJPgNKSTlVzddY2-MAhRmhKTgLgUVvIrh5qxUTwtMaXc7KqFtqGPn0wWgFoYXdWzUKOu0Kt3nKqbyuEBo$ >\n\n\n\n\nFrom: solutions@ricoh-usa.com<mailto:solutions@ricoh-usa.com> <solutions@ricoh-usa.com<mailto:solutions@ricoh-usa.com>>\nSent: Monday, June 9, 2025 11:30 AM\nTo: Lakesha Pittman <lakesha.pittman@manpowergroup.com<mailto:lakesha.pittman@manpowergroup.com>>\nSubject: [COMMENTS ADDED] - Incident INC0015192562 - is tls 1.2 supported ( ProC5310S )\n\n\n\u26a0\ufe0f\n\n\n\nCaution: The sender is from outside of our organization. Do not click on any links or open attachments unless you are expecting links/attachments from this sender. If not, please report by clicking the \u201cReport Phishing\u201d or \u201cReport Spam\u201d button above.\n\n[Ricoh Logo]\n\nDear Lakesha,\n\nCan you please forward the attached document to your IT to see if this answers their question.   If it doesn't, please forward their contact info and I will work with them to get the question answered.\n\nRegards,\n\n\n\nCarl Grabiel\n\nSoftware Incident Spec.Centralized Services\n\n\n\nIf you have any questions, reply to this email or call +1 (888) 424-1573.\n\nThank you for choosing Ricoh.\n\n\n\nNOTICE: This email and any attachments are intended solely for use by authorized recipients. Any review, reliance or distribution by others or forwarding without express permission is strictly prohibited. If you are not the intended recipient, please contact the sender and delete all copies.\n\nRef:MSG263709482\nThis email and any files transmitted with it are confidential and or privileged information internal to our organization and intended solely for the use of the individual(s) or entity or entities to whom they are addressed. This message contains confidential information and is intended only for the recipients. If you have received this email in error please notify the sender by replying to this email and then delete this message and any attachments. If you are not the named addressee you may not disseminate, distribute or copy this e-mail. If you are the intended recipient you are notified that unauthorized disclosure, copy, storage, or distribution of this information is strictly prohibited."
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DUE_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 1033 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 135,
+        "missing_count": "1033",
+        "sample_values": [
+          "2025-06-15 17:00:47",
+          "2025-06-15 16:59:06",
+          "2025-06-15 17:02:11",
+          "2025-06-15 17:03:22",
+          "2025-06-15 17:03:42"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "ESCALATION": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(1) field",
+      "metadata": {
+        "inferred_type": "cat_int(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "EXPECTED_START": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "FOLLOW_UP": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 621 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 548,
+        "missing_count": "621",
+        "sample_values": [
+          "2025-06-03 17:23:49",
+          "2025-06-04 19:52:46",
+          "2025-06-06 21:13:12",
+          "2025-06-09 16:29:25",
+          "2025-06-09 18:14:46"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "HOLD_REASON": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "IMPACT": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(3) field",
+      "metadata": {
+        "inferred_type": "cat_int(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "KNOWLEDGE": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=true (Y/True), 0=false (N/False)",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          true,
+          true,
+          true,
+          true,
+          false
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      },
+      "validator": "bool_to_int"
+    },
+    "MADE_SLA": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          true,
+          true,
+          true,
+          true,
+          true
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "MAJOR_INCIDENT_STATE": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OPENED_AT": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1155,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-03 17:22:29",
+          "2025-06-04 19:51:15",
+          "2025-06-06 17:37:59",
+          "2025-06-09 13:06:38",
+          "2025-06-09 17:18:15"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "ORIGIN_ID": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "ORIGIN_TABLE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "PRIORITY": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(4) field",
+      "metadata": {
+        "inferred_type": "cat_int(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          4,
+          4,
+          4,
+          3,
+          4
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "REASSIGNMENT_COUNT": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(9) field",
+      "metadata": {
+        "inferred_type": "cat_int(9)",
+        "unique_count": 9,
+        "missing_count": "0",
+        "sample_values": [
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "REOPEN_COUNT": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(3) field",
+      "metadata": {
+        "inferred_type": "cat_int(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "REOPENED_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 1133 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 36,
+        "missing_count": "1133",
+        "sample_values": [
+          "2025-06-09 18:22:09",
+          "2025-06-23 18:42:05",
+          "2024-09-13 17:14:06",
+          "2022-08-11 16:45:10",
+          "2022-08-18 13:25:32"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLVED_AT": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 18 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1130,
+        "missing_count": "18",
+        "sample_values": [
+          "2025-06-03 17:39:23",
+          "2025-06-04 20:18:36",
+          "2025-06-06 21:46:16",
+          "2025-06-09 21:10:17",
+          "2025-06-09 19:34:35"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "SERVICE_OFFERING": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SEVERITY": {
+      "type": "int",
+      "required": true,
+      "description": "cat_int(3) field",
+      "metadata": {
+        "inferred_type": "cat_int(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "SHORT_DESCRIPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(955) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(955)",
+        "unique_count": 955,
+        "missing_count": "0",
+        "sample_values": [
+          "Auto Index running slow",
+          "Can document data from a tray be exported to xls like indexed data can.",
+          "SESC-Customer Support Inquiry[EXTERNAL]",
+          "is tls 1.2 supported ( ProC5310S )",
+          "SESC-FW: URGENT - RE: [COMMENTS ADDED] - Incident INC0015192562 - is tls 1.2 supported ( ProC5310S )[EXTERNAL]"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SLA_DUE": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "SYS_CREATED_BY": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(186) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(186)",
+        "unique_count": 186,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "guest",
+          "julianne.dublin@ricoh-usa.com",
+          "lakesha.pittman@noreply.co"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SYS_CREATED_ON": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1157,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-03 17:23:54",
+          "2025-06-04 19:52:49",
+          "2025-06-06 17:38:01",
+          "2025-06-09 13:06:38",
+          "2025-06-09 17:18:16"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "SYS_CREATED_ON_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 585,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "SYS_UPDATED_BY": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(30) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(30)",
+        "unique_count": 30,
+        "missing_count": "0",
+        "sample_values": [
+          "system",
+          "system",
+          "system",
+          "system",
+          "system"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SYS_UPDATED_ON": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 1157,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-06 18:02:13",
+          "2025-06-09 18:00:26",
+          "2025-06-11 19:01:16",
+          "2025-06-12 22:00:49",
+          "2025-06-12 20:02:14"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "TASK_EFFECTIVE_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1169) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1169)",
+        "unique_count": 1169,
+        "missing_count": "0",
+        "sample_values": [
+          "INC0015171625",
+          "INC0015178360",
+          "INC0015188568",
+          "INC0015192562",
+          "INC0015195032"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TIME_WORKED": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 182 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 923,
+        "missing_count": "182",
+        "sample_values": [
+          "1970-01-01 00:09:55",
+          "1970-01-01 00:25:47",
+          "1970-01-01 01:21:30",
+          "1970-01-01 01:20:58",
+          "1970-01-01 00:02:37"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "INCIDENT_STATE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INCIDENT_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1169) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1169)",
+        "unique_count": 1169,
+        "missing_count": "0",
+        "sample_values": [
+          "734c3f5747f56210a8947b8b416d4303",
+          "38f7657f2bf9ee1051e4fdf2fe91bf7b",
+          "98ac57d02b06e61055cef658c891bfb2",
+          "3a4bfd912b0eea5051e4fdf2fe91bf35",
+          "d4e4b6512b4226500001fa79ed91bf11"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 22 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 587,
+        "missing_count": "22",
+        "sample_values": [
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-11",
+          "2025-06-12",
+          "2025-06-12"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "INCIDENT_BUSINESS_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 17 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 792,
+        "missing_count": "17",
+        "sample_values": [
+          1014,
+          1641,
+          14897,
+          18617,
+          8180
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "INCIDENT_CALENDAR_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 17 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 1096,
+        "missing_count": "17",
+        "sample_values": [
+          1014,
+          1641,
+          14897,
+          29019,
+          8180
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "OPENED_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 585,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "RESOLVED_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 18 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 579,
+        "missing_count": "18",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "AGENT_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(81) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(81)",
+        "unique_count": 81,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_EMP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(77) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(77)",
+        "unique_count": 77,
+        "missing_count": "0",
+        "sample_values": [
+          "158558",
+          "158558",
+          "158558",
+          "158558",
+          "158558"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(81) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(81)",
+        "unique_count": 81,
+        "missing_count": "0",
+        "sample_values": [
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CALLER_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(465) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(465)",
+        "unique_count": 465,
+        "missing_count": "0",
+        "sample_values": [
+          "Steven.dickey@wilco.coop",
+          "ayesha.khan@coterra.com",
+          "Jillian.Ferris@dfamilk.com",
+          "lakesha.pittman@manpowergroup.com",
+          "lakesha.pittman@manpowergroup.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CALLER_EMP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(21) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(21)",
+        "unique_count": 21,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CALLER_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(490) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(490)",
+        "unique_count": 490,
+        "missing_count": "0",
+        "sample_values": [
+          "Steven Dickey",
+          "ayesha khan",
+          "Jillian Ferris",
+          "Lakesha Pittman",
+          "Lakesha Pittman"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(88) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(88)",
+        "unique_count": 88,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_EMP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(82) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(82)",
+        "unique_count": 82,
+        "missing_count": "0",
+        "sample_values": [
+          "158558",
+          "158558",
+          "158558",
+          "158558",
+          "158558"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CLOSED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(90) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(90)",
+        "unique_count": 90,
+        "missing_count": "0",
+        "sample_values": [
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OPENED_BY_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(171) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(171)",
+        "unique_count": 171,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "N/A",
+          "julianne.dublin@ricoh-usa.com",
+          "lakesha.pittman@manpowergroup.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OPENED_BY_EMP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(92) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(92)",
+        "unique_count": 92,
+        "missing_count": "0",
+        "sample_values": [
+          "158558",
+          "158558",
+          "N/A",
+          "22127713",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "OPENED_BY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(174) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(174)",
+        "unique_count": 174,
+        "missing_count": "0",
+        "sample_values": [
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "N/A",
+          "Julianne Dublin",
+          "Lakesha Pittman"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLVED_EMAIL": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(88) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(88)",
+        "unique_count": 88,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLVED_EMP_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(83) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(83)",
+        "unique_count": 83,
+        "missing_count": "0",
+        "sample_values": [
+          "158558",
+          "158558",
+          "158558",
+          "158558",
+          "158558"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLVED_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(90) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(90)",
+        "unique_count": 90,
+        "missing_count": "0",
+        "sample_values": [
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel",
+          "Carl Grabiel"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_DESCRIPTION": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(16) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(16)",
+        "unique_count": 16,
+        "missing_count": "0",
+        "sample_values": [
+          "Software Incident Analyst team, Plus Problem management analyts",
+          "Software Incident Analyst team, Plus Problem management analyts",
+          "Software Incident Analyst team, Plus Problem management analyts",
+          "Software Incident Analyst team, Plus Problem management analyts",
+          "Software Incident Analyst team, Plus Problem management analyts"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(42) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(42)",
+        "unique_count": 42,
+        "missing_count": "0",
+        "sample_values": [
+          "CSO CSC - Software Solutions",
+          "CSO CSC - Software Solutions",
+          "CSO CSC - Software Solutions",
+          "CSO CSC - Software Solutions",
+          "CSO CSC - Software Solutions"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_CRM_REFERENCE_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(15) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(15)",
+        "unique_count": 15,
+        "missing_count": "0",
+        "sample_values": [
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CSO_FLAG": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "CSO",
+          "CSO",
+          "CSO",
+          "CSO",
+          "CSO"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CMDB_CI_CATEGORY": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "Hardware",
+          "N/A",
+          "Hardware",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CONFIGURATION_ITEM": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(83) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(83)",
+        "unique_count": 83,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "904026",
+          "N/A",
+          "72049658",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COMPANY_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(287) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(287)",
+        "unique_count": 287,
+        "missing_count": "0",
+        "sample_values": [
+          "WILCO FARMERS-17370443",
+          "COTERRA ENERGY INC-37534604",
+          "Dairy Farmers Of America Inc",
+          "MANPOWER-2020207",
+          "MANPOWER-2020207"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "U_BILLING_AUTHORITY": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "MINDSHIFT",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SERVICE_LINE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "ITS",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUPPORT_TEAM": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(16) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(16)",
+        "unique_count": 16,
+        "missing_count": "0",
+        "sample_values": [
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC",
+          "CSO-CORE-SESC"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TIER_LEVEL": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "Tier 2",
+          "Tier 2",
+          "Tier 2",
+          "Tier 2",
+          "Tier 2"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "REPORTING_DIRECTOR": {
+      "type": "str",
+      "required": true,
+      "description": "cat(5) field",
+      "metadata": {
+        "inferred_type": "cat(5)",
+        "unique_count": 5,
+        "missing_count": "0",
+        "sample_values": [
+          "Naushad Alli",
+          "Naushad Alli",
+          "Naushad Alli",
+          "Naushad Alli",
+          "Naushad Alli"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "REPORTING_MANAGER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(17) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(17)",
+        "unique_count": 17,
+        "missing_count": "0",
+        "sample_values": [
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "REPORTING_SUPERVISOR": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(14) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(14)",
+        "unique_count": 14,
+        "missing_count": "0",
+        "sample_values": [
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone",
+          "Justin Stone"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "AGENT_COUNTRY": {
+      "type": "str",
+      "required": true,
+      "description": "cat(8) field",
+      "metadata": {
+        "inferred_type": "cat(8)",
+        "unique_count": 8,
+        "missing_count": "0",
+        "sample_values": [
+          "United States",
+          "United States",
+          "United States",
+          "United States",
+          "United States"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "IS_AGENT_KCS_COACH": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "true",
+          "true",
+          "true",
+          "true",
+          "true"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "KCS_COACH": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(15) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(15)",
+        "unique_count": 15,
+        "missing_count": "0",
+        "sample_values": [
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "WORKER_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "employee",
+          "employee",
+          "employee",
+          "employee",
+          "employee"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "BILLABLE_TYPE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "sga",
+          "sga",
+          "sga",
+          "sga",
+          "sga"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RICOH_SUPPORT_TOOLS": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "FIVE9_VO_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(43) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(43)",
+        "unique_count": 43,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "FIVE9_VCC_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(43) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(43)",
+        "unique_count": 43,
+        "missing_count": "0",
+        "sample_values": [
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com",
+          "carl.grabiel@ricoh-usa.com"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "KASEYA": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "false",
+          "false",
+          "false",
+          "false",
+          "false"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUBJECT_CATEGORY": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(60) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(60)",
+        "unique_count": 60,
+        "missing_count": "0",
+        "sample_values": [
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLUTION_BUSINESS_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 735 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 427,
+        "missing_count": "735",
+        "sample_values": [
+          928,
+          1547,
+          12696,
+          24975,
+          4346
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLUTION_BUSINESS_PAUSE_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 1028 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 137,
+        "missing_count": "1028",
+        "sample_values": [
+          2198,
+          4042,
+          321520,
+          4275,
+          472953
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLUTION_BUSINESS_PERCENTAGE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 735 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 375,
+        "missing_count": "735",
+        "sample_values": [
+          0.36,
+          0.6,
+          4.9,
+          9.64,
+          1.68
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "RESOLUTION_BUSINESS_TIME_LEFT": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 735 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 379,
+        "missing_count": "735",
+        "sample_values": [
+          258272,
+          257653,
+          246504,
+          234225,
+          254854
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLUTION_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 735 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 426,
+        "missing_count": "735",
+        "sample_values": [
+          928,
+          1547,
+          12696,
+          22056,
+          4346
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLUTION_END_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 740 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 429,
+        "missing_count": "740",
+        "sample_values": [
+          "2025-06-03 17:39:22",
+          "2025-06-04 20:18:36",
+          "2025-06-06 21:46:15",
+          "2025-06-09 21:10:17",
+          "2025-06-09 19:34:35"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_ORIGINAL_BREACH_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 735 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 432,
+        "missing_count": "735",
+        "sample_values": [
+          "2025-06-06 17:23:54",
+          "2025-06-07 19:52:49",
+          "2025-06-09 17:38:01",
+          "2025-06-12 13:06:40",
+          "2025-06-12 18:22:09"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_PAUSE_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 981 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 185,
+        "missing_count": "981",
+        "sample_values": [
+          2198,
+          6961,
+          6725,
+          1102584,
+          413425
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESOLUTION_PAUSE_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 1164 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 5,
+        "missing_count": "1164",
+        "sample_values": [
+          "2025-06-25 15:02:09",
+          "2025-06-27 17:04:03",
+          "2025-07-01 17:32:17",
+          "2025-07-01 19:32:16",
+          "2025-03-17 20:20:50"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_PERCENTAGE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 735 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 319,
+        "missing_count": "735",
+        "sample_values": [
+          0.36,
+          0.6,
+          4.9,
+          8.61,
+          1.68
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "RESOLUTION_PLANNED_END_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 735 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 433,
+        "missing_count": "735",
+        "sample_values": [
+          "2025-06-06 17:23:54",
+          "2025-06-07 19:52:49",
+          "2025-06-09 18:14:39",
+          "2025-06-12 14:14:02",
+          "2025-06-12 18:22:09"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_STAGE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "completed",
+          "completed",
+          "completed",
+          "completed",
+          "completed"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLUTION_START_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 735 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 433,
+        "missing_count": "735",
+        "sample_values": [
+          "2025-06-03 17:23:54",
+          "2025-06-04 19:52:49",
+          "2025-06-06 17:38:01",
+          "2025-06-09 13:06:40",
+          "2025-06-09 18:22:09"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_TIME_LEFT": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 735 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 382,
+        "missing_count": "735",
+        "sample_values": [
+          "1970-01-03 23:44:32",
+          "1970-01-03 23:34:13",
+          "1970-01-03 20:28:24",
+          "1970-01-03 17:03:45",
+          "1970-01-03 22:47:34"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESOLUTION_TIMEZONE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(8) field",
+      "metadata": {
+        "inferred_type": "cat(8)",
+        "unique_count": 8,
+        "missing_count": "0",
+        "sample_values": [
+          "US/Eastern",
+          "US/Eastern",
+          "US/Eastern",
+          "US/Eastern",
+          "US/Eastern"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLUTION_CONTRACT_SLA_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat(7) field",
+      "metadata": {
+        "inferred_type": "cat(7)",
+        "unique_count": 7,
+        "missing_count": "0",
+        "sample_values": [
+          "TSSC Incidents - Resolution",
+          "TSSC Incidents - Resolution",
+          "TSSC Incidents - Resolution",
+          "TSSC Incidents - Resolution",
+          "TSSC Incidents - Resolution"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_BUSINESS_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 995 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 171,
+        "missing_count": "995",
+        "sample_values": [
+          1491,
+          359,
+          337,
+          76,
+          78
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESPONSE_BUSINESS_PAUSE_DURATION": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_BUSINESS_PERCENTAGE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 995 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 168,
+        "missing_count": "995",
+        "sample_values": [
+          41.42,
+          9.97,
+          9.36,
+          2.11,
+          2.17
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "RESPONSE_BUSINESS_TIME_LEFT": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 995 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 154,
+        "missing_count": "995",
+        "sample_values": [
+          2109,
+          3241,
+          3263,
+          3524,
+          3522
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESPONSE_DURATION": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 995 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 171,
+        "missing_count": "995",
+        "sample_values": [
+          1491,
+          359,
+          337,
+          76,
+          78
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "RESPONSE_END_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 174,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06 18:02:52",
+          "2025-06-12 14:38:05",
+          "2025-06-12 14:45:41",
+          "2025-06-16 15:30:48",
+          "2025-06-17 18:47:20"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSE_ORIGINAL_BREACH_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 174,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06 18:38:01",
+          "2025-06-12 15:32:06",
+          "2025-06-12 15:40:04",
+          "2025-06-16 16:29:32",
+          "2025-06-17 19:46:02"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSE_PAUSE_DURATION": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_PAUSE_TIME": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str field with 1169 missing values",
+      "metadata": {
+        "inferred_type": "str",
+        "unique_count": 0,
+        "missing_count": "1169",
+        "sample_values": [],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_PERCENTAGE": {
+      "type": "Optional[float]",
+      "required": false,
+      "default": null,
+      "description": "num field with 995 missing values",
+      "metadata": {
+        "inferred_type": "num",
+        "unique_count": 169,
+        "missing_count": "995",
+        "sample_values": [
+          41.42,
+          9.97,
+          9.36,
+          2.11,
+          2.17
+        ],
+        "actual_dtype": "float"
+      }
+    },
+    "RESPONSE_PLANNED_END_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 174,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06 18:38:01",
+          "2025-06-12 15:32:06",
+          "2025-06-12 15:40:04",
+          "2025-06-16 16:29:32",
+          "2025-06-17 19:46:02"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSE_STAGE": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "completed",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_START_TIME": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 174,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06 17:38:01",
+          "2025-06-12 14:32:06",
+          "2025-06-12 14:40:04",
+          "2025-06-16 15:29:32",
+          "2025-06-17 18:46:02"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSE_TIME_LEFT": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 155,
+        "missing_count": "995",
+        "sample_values": [
+          "1970-01-01 00:35:09",
+          "1970-01-01 00:54:01",
+          "1970-01-01 00:54:23",
+          "1970-01-01 00:58:44",
+          "1970-01-01 00:58:42"
+        ],
+        "actual_dtype": "datetime"
+      }
+    },
+    "RESPONSE_TIMEZONE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(5) field",
+      "metadata": {
+        "inferred_type": "cat(5)",
+        "unique_count": 5,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "US/Eastern",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_CONTRACT_SLA_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "TSSC Incidents - Response",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CSO_RESOULTION_FLAG": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TRANSACTION_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(441) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(441)",
+        "unique_count": 441,
+        "missing_count": "0",
+        "sample_values": [
+          "INC0015171625",
+          "INC0015178360",
+          "INC0015188568",
+          "INC0015192562",
+          "INC0015195032"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESPONSE_HAS_BREACHED": {
+      "type": "Optional[bool]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 995 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "995",
+        "sample_values": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "actual_dtype": "bool"
+      }
+    },
+    "RESOLUTION_HAS_BREACHED": {
+      "type": "Optional[bool]",
+      "required": false,
+      "default": null,
+      "description": "bin field with 735 missing values",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "735",
+        "sample_values": [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        "actual_dtype": "bool"
+      }
+    },
+    "SYS_CLASS_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "str(1) field",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "0",
+        "sample_values": [
+          "incident",
+          "incident",
+          "incident",
+          "incident",
+          "incident"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNMENT_GROUP_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(42) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(42)",
+        "unique_count": 42,
+        "missing_count": "0",
+        "sample_values": [
+          "3ae7c994db480b40f20cf209af961992",
+          "3ae7c994db480b40f20cf209af961992",
+          "3ae7c994db480b40f20cf209af961992",
+          "3ae7c994db480b40f20cf209af961992",
+          "3ae7c994db480b40f20cf209af961992"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "ASSIGNED_TO_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(81) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(81)",
+        "unique_count": 81,
+        "missing_count": "0",
+        "sample_values": [
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd",
+          "7454df50db3b0b40ebba7a131f9619bd"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TASK_ID_FK": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(440) field with 729 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(440)",
+        "unique_count": 440,
+        "missing_count": "729",
+        "sample_values": [
+          "734c3f5747f56210a8947b8b416d4303",
+          "38f7657f2bf9ee1051e4fdf2fe91bf7b",
+          "98ac57d02b06e61055cef658c891bfb2",
+          "3a4bfd912b0eea5051e4fdf2fe91bf35",
+          "d4e4b6512b4226500001fa79ed91bf11"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "RESOLUTION_START_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 735 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 290,
+        "missing_count": "735",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "RESOLUTION_END_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 740 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 284,
+        "missing_count": "740",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "RESPONSE_START_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 149,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06",
+          "2025-06-12",
+          "2025-06-12",
+          "2025-06-16",
+          "2025-06-17"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "RESPONSE_END_DATE": {
+      "type": "Optional[datetime]",
+      "required": false,
+      "default": null,
+      "description": "datetime field with 995 missing values",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 148,
+        "missing_count": "995",
+        "sample_values": [
+          "2025-06-06",
+          "2025-06-12",
+          "2025-06-12",
+          "2025-06-16",
+          "2025-06-17"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "CREATED_DATE": {
+      "type": "datetime",
+      "required": true,
+      "description": "datetime field",
+      "metadata": {
+        "inferred_type": "datetime",
+        "unique_count": 585,
+        "missing_count": "0",
+        "sample_values": [
+          "2025-06-03",
+          "2025-06-04",
+          "2025-06-06",
+          "2025-06-09",
+          "2025-06-09"
+        ],
+        "actual_dtype": "inferred_datetime"
+      }
+    },
+    "SERVICE_PRODUCT": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "DocuWare",
+          "DocuWare",
+          "DocuWare",
+          "DocuWare",
+          "DocuWare"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "DISPATCH_SOURCE": {
+      "type": "str",
+      "required": true,
+      "description": "cat(3) field",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SR_REFERENCE_ID": {
+      "type": "str",
+      "required": true,
+      "description": "cat(4) field",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SERIAL_NUMBER": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(166) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(166)",
+        "unique_count": 166,
+        "missing_count": "0",
+        "sample_values": [
+          "905792",
+          "N/A",
+          "901348",
+          " 815360",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUB_STATE": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(15) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(15)",
+        "unique_count": 15,
+        "missing_count": "0",
+        "sample_values": [
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A",
+          "N/A"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "SUBJECT_FULL_NAME": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(72) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(72)",
+        "unique_count": 72,
+        "missing_count": "0",
+        "sample_values": [
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center",
+          "TSSC - Software Support Center"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "STATUS": {
+      "type": "str",
+      "required": true,
+      "description": "cat(6) field",
+      "metadata": {
+        "inferred_type": "cat(6)",
+        "unique_count": 6,
+        "missing_count": "0",
+        "sample_values": [
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed",
+          "Closed"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "INCIDENT_ID_WPK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(1169) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(1169)",
+        "unique_count": 1169,
+        "missing_count": "0",
+        "sample_values": [
+          "734c3f5747f56210a8947b8b416d4303",
+          "38f7657f2bf9ee1051e4fdf2fe91bf7b",
+          "98ac57d02b06e61055cef658c891bfb2",
+          "3a4bfd912b0eea5051e4fdf2fe91bf35",
+          "d4e4b6512b4226500001fa79ed91bf11"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "COMPANY_ID_FK": {
+      "type": "str",
+      "required": true,
+      "description": "cat_high_card(288) field",
+      "metadata": {
+        "inferred_type": "cat_high_card(288)",
+        "unique_count": 288,
+        "missing_count": "0",
+        "sample_values": [
+          "7181e243db590380966df06e0f961996",
+          "248402a11bc101540d8addf2cc4bcba8",
+          "023213271b108d14c9d08402604bcb9a",
+          "940420a6db84c700ebba7a131f9619e7",
+          "940420a6db84c700ebba7a131f9619e7"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "LOCATION_ID_FK": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat_high_card(49) field with 1102 missing values",
+      "metadata": {
+        "inferred_type": "cat_high_card(49)",
+        "unique_count": 49,
+        "missing_count": "1102",
+        "sample_values": [
+          "dadad2eb479bb5543987d4a7536d43ef",
+          "18eabc62db4c43000763f8621f961913",
+          "16ab8538db167200bd78f8621f96194e",
+          "319dc21597f819906e89f847f053afdc",
+          "16ab8538db167200bd78f8621f96194e"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "TICKET_AGE": {
+      "type": "Optional[int]",
+      "required": false,
+      "default": null,
+      "description": "int field with 1151 missing values",
+      "metadata": {
+        "inferred_type": "int",
+        "unique_count": 17,
+        "missing_count": "1151",
+        "sample_values": [
+          20,
+          19,
+          15,
+          6,
+          6
+        ],
+        "actual_dtype": "int"
+      }
+    },
+    "AGGING_BUCKET": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(3) field with 1151 missing values",
+      "metadata": {
+        "inferred_type": "cat(3)",
+        "unique_count": 3,
+        "missing_count": "1151",
+        "sample_values": [
+          "15-30 days",
+          "15-30 days",
+          "15-30 days",
+          "4-7 days",
+          "4-7 days"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "FIRST_CONTACT_LEVEL_INSCOPE_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=true (Y/True), 0=false (N/False)",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      },
+      "validator": "bool_to_int"
+    },
+    "SOLVED_ON_FIRST_CONTACT_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=true (Y/True), 0=false (N/False)",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Y",
+          "Y",
+          "N",
+          "N",
+          "N"
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      },
+      "validator": "bool_to_int"
+    },
+    "SOLVED_ON_FIRST_LEVEL_FLAG": {
+      "type": "int",
+      "required": true,
+      "description": "Binary field: 1=true (Y/True), 0=false (N/False)",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        "actual_dtype": "int",
+        "encoding": "1=Y/True/1, 0=N/False/0"
+      },
+      "validator": "bool_to_int"
+    },
+    "AGENT_ASSIGNED_FLAG": {
+      "type": "str",
+      "required": true,
+      "description": "bin field",
+      "metadata": {
+        "inferred_type": "bin",
+        "unique_count": 2,
+        "missing_count": "0",
+        "sample_values": [
+          "Assigned",
+          "Assigned",
+          "Assigned",
+          "Assigned",
+          "Assigned"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "CSO_RESPONSE_FLAG": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "str(1) field with 995 missing values",
+      "metadata": {
+        "inferred_type": "str(1)",
+        "unique_count": 1,
+        "missing_count": "995",
+        "sample_values": [
+          "Y",
+          "Y",
+          "Y",
+          "Y",
+          "Y"
+        ],
+        "actual_dtype": "str"
+      }
+    },
+    "GROUP_TIER_LEVEL": {
+      "type": "Optional[str]",
+      "required": false,
+      "default": null,
+      "description": "cat(4) field with 4 missing values",
+      "metadata": {
+        "inferred_type": "cat(4)",
+        "unique_count": 4,
+        "missing_count": "4",
+        "sample_values": [
+          "Tier 1",
+          "Tier 1",
+          "Tier 1",
+          "Tier 1",
+          "Tier 1"
+        ],
+        "actual_dtype": "str"
+      }
+    }
+  },
+  "description": "Pydantic model for PS_DOCUWARE_SNOW_INC table",
+  "created_at": "2025-08-13T13:50:17.501395"
+}

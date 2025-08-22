@@ -1,0 +1,32 @@
+# -----------------------------------------------------------------------------
+# * Snowflake session configurations
+# -----------------------------------------------------------------------------
+# * Author: Evgeni Nikolaev
+# * Emails: evgeni.nikolaev@ricoh-usa.com
+# -----------------------------------------------------------------------------
+# * UPDATED ON: 2025-07-29
+# * CREATED ON: 2025-07-29
+# -----------------------------------------------------------------------------
+# COPYRIGHT @ 2025 Ricoh. All rights reserved.
+# The information contained herein is copyright and proprietary to
+# Ricoh and may not be reproduced, disclosed, or used in
+# any manner without prior written permission from Ricoh.
+# -----------------------------------------------------------------------------
+sessions:
+  development:
+    account: "ricohusa.us-east-1.privatelink"
+    user: "INTAIMLGEN"
+    password: "QPalzmbchdeul77##"
+    warehouse: "RAC_AIML_NONPROD"
+    database: "RAC_RAPID_DEV"
+    schema: "RUS_AIML"
+    role: "RAC_DEV_AIML_ROLE"
+
+  production:
+    account: "ricohusa.us-east-1.privatelink"
+    user: "INTAIMLGEN"
+    password: "QPalzmbchdeul77##"
+    warehouse: "RAC_AIML_PROD"
+    database: "RAC_RAPID_PROD"
+    schema: "RUS_AIML"
+    role: "RAC_PROD_AIML_ROLE"
