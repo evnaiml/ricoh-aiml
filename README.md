@@ -15,11 +15,8 @@
 ## 📋 Table of Contents
 
 - [About](#-about)
-- [Key Features](#-key-features)
 - [Project Structure](#-project-structure)
 - [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Usage](#-usage)
 - [Documentation](#-documentation)
 - [Architecture](#-architecture)
 - [Contributing](#-contributing)
@@ -29,30 +26,7 @@
 
 ## 📖 About
 
-The Ricoh AI/ML Churn Prediction Framework is an enterprise-grade solution designed to predict customer churn with high accuracy using advanced machine learning techniques. Built specifically for DOCUWARE product analytics, this framework combines state-of-the-art time series feature engineering with gradient boosting models to deliver actionable insights about customer retention.
-
-### Problem Statement
-Current churn prediction models are overestimating churn rates by 4-8x (predicting ~50% annual churn vs. actual 10-15%), leading to inefficient resource allocation and missed opportunities for customer retention.
-
-### Solution
-Our framework addresses this through:
-- **TSFresh Feature Engineering**: Automatic extraction of 794+ time series features with intelligent selection to the top 150 most predictive features
-- **CatBoost with GPU Acceleration**: Native handling of high-cardinality categorical features using 4 GPUs (24GB each) for rapid training
-- **Type-Safe Data Pipeline**: Pydantic schema validation ensuring data consistency from Snowflake to model training
-- **Production-Ready Infrastructure**: Comprehensive logging, monitoring, and visualization dashboards
-
-## ✨ Key Features
-
-- 🚀 **High-Performance Computing**: Leverages 48 CPUs and 4 GPUs for distributed processing
-- 📊 **Advanced Feature Engineering**: TSFresh-based time series feature extraction with multi-method selection
-- 🔒 **Type-Safe Data Pipeline**: Pydantic validation with automatic type conversion and error handling
-- 📈 **Comprehensive Visualization**: Centralized dashboard for churn analysis and model monitoring
-- 🔄 **Boolean Standardization**: Consistent 0/1 encoding for all ML operations
-- 🏭 **Production-Grade Logging**: Structured logging with Loguru for debugging and monitoring
-- 🎯 **Merge Validation Protocol**: Automated checks preventing silent pipeline failures
-- 📝 **Extensive Documentation**: 21+ example scripts demonstrating best practices
-- 🔀 **Dual Data Loading Pipelines**: Separate pipelines for training (with imputation) and inferencing (without imputation)
-- 🏷️ **New Customer Detection**: Automatic identification and flagging of customers not in training data
+The Ricoh AI/ML Churn Prediction Framework is an enterprise-grade solution designed to predict customer churn with high accuracy using advanced machine learning techniques.
 
 ## 📁 Project Structure
 
@@ -240,177 +214,6 @@ The `requirements.txt` file is a conda environment specification file, not a pip
 - RAPIDS ecosystem for GPU-accelerated data processing
 - All necessary ML, data processing, and visualization libraries
 
-## 🎯 Quick Start
-
-### Basic Data Fetching
-
-```python
-from churn_aiml.data.db.snowflake.fetchdata import SnowFetch
-from omegaconf import DictConfig
-import hydra
-
-@hydra.main(config_path="../conf", config_name="config", version_base=None)
-def main(cfg: DictConfig):
-    # Initialize fetcher with type enforcement
-    with SnowFetch(config=cfg, environment="development") as fetcher:
-        # Fetch data with automatic type conversion
-        df = fetcher.fetch_data_validation_enforced(
-            table_name="PS_DOCUWARE_L1_CUST",
-            context="raw"
-        )
-        print(f"Fetched {len(df)} records with validated types")
-
-if __name__ == "__main__":
-    main()
-```
-
-### Loading Training Data
-
-```python
-from churn_aiml.data.db.snowflake.loaddata import SnowTrainDataLoader
-from churn_aiml.visualization.churn_plots import ChurnLifecycleVizSnowflake
-
-# Initialize data loader
-data_loader = SnowTrainDataLoader(config=cfg)
-data_dict = data_loader.load_data()
-
-# Create visualizations
-viz = ChurnLifecycleVizSnowflake()
-viz.plot_churn_distribution(data_dict['customer_metadata'])
-viz.plot_usage_trends(data_dict['time_series_features'])
-```
-
-## 📚 Usage
-
-### Demo Examples
-
-The `demo/` directory contains comprehensive examples progressing from basic to production-ready implementations:
-
-#### 1. Basic Fetching (No Validation)
-```bash
-# Single table fetching
-cd demo/products/01_DOCUWARE/01_SNOWFLAKE/01_fetch_examples_no_validation/
-python no_rules/01_manual_no_rules/manual.py
-
-# With SQL join rules
-python with_sequel_rules/01_manual_with_join_rules/manual.py
-```
-
-#### 2. Schema Generation
-```bash
-# Generate schema from single table
-cd demo/products/01_DOCUWARE/01_SNOWFLAKE/02_fetch_examples_validation_created/
-python no_rules/01_manual_no_rules/test_manual.py
-
-# Script-based generation
-python no_rules/02_script_no_rules/test_script.py
-
-# Production-grade schema generation
-python no_rules/03_production_no_rules/production_script.py
-```
-
-#### 3. Type Enforcement with Validation
-```bash
-# Enforce types using schemas
-cd demo/products/01_DOCUWARE/01_SNOWFLAKE/03_fetch_examples_validation_enforced/
-python no_rules/01_manual_no_rules/test_manual.py
-
-# With join rules and type enforcement
-python with_rules/03_production_with_join_rules/production_script.py
-```
-
-#### 4. Comprehensive Data Loading
-
-##### Training Data Scripts
-```bash
-# Interactive exploration of training data
-cd demo/products/01_DOCUWARE/01_SNOWFLAKE/04_data_loading/01_train_data/
-python 01_manual_hydra/test_train_manual.py
-
-# Automated training data script with visualizations
-python 02_script/test_train_script.py
-
-# Production training data pipeline
-python 03_production/test_train_production_script.py
-```
-
-##### New/Active Customer Data Scripts
-```bash
-# Interactive exploration of new/active customers
-cd demo/products/01_DOCUWARE/01_SNOWFLAKE/04_data_loading/02_live_data/
-python 01_manual_hydra/test_new_manual.py
-
-# Automated new data script with train/new comparison
-python 02_script/test_new_script.py
-
-# Production new data pipeline for inferencing
-python 03_production/test_new_production_script.py
-```
-
-### Key Components
-
-#### Enhanced SnowFetch
-```python
-from churn_aiml.data.db.snowflake.fetchdata import (
-    SnowFetch, 
-    DtypeTransformationAnalyzer,
-    JoinRuleAnalyzer
-)
-
-# Analyze data transformations
-analyzer = DtypeTransformationAnalyzer(logger)
-report = analyzer.analyze_table(fetcher, df_before, df_after, table_name)
-```
-
-#### Data Loading Framework
-
-##### Training Data Loading
-```python
-from churn_aiml.data.db.snowflake.loaddata import SnowTrainDataLoader
-
-# Load training data with imputation
-loader = SnowTrainDataLoader(config=cfg, environment="development")
-data = loader.load_data()  # Returns dict with multiple DataFrames
-feature_df = loader.get_feature_engineering_dataset()  # TSFresh-ready
-training_df = loader.get_training_ready_data()  # Combined features
-churn_summary = loader.get_churn_summary()  # Churn statistics
-```
-
-##### New/Active Customer Data Loading
-```python
-from churn_aiml.data.db.snowflake.loaddata import SnowLiveDataLoader, SnowTrainDataLoader
-
-# Load training data for comparison
-train_loader = SnowTrainDataLoader(config=cfg)
-train_data = train_loader.load_data()
-
-# Load new/active customer data WITHOUT imputation
-live_loader = SnowLiveDataLoader(config=cfg, environment="development")
-new_data = new_loader.load_data(train_data_loader=train_loader)
-# Data includes 'new_data' column: 0=training, 1=new
-
-# Get feature engineering dataset for inferencing
-fe_dataset = new_loader.get_feature_engineering_dataset()
-active_summary = new_loader.get_active_summary()  # Active customer statistics
-```
-
-#### Visualization Framework
-```python
-from churn_aiml.visualization.churn_plots import ChurnLifecycleVizSnowflake
-
-viz = ChurnLifecycleVizSnowflake()
-
-# Standard visualizations for training data
-viz.plot_all_distributions(data_dict, save_path="./figures")
-viz.create_monitoring_dashboard(metrics, data_dict)
-
-# Enhanced visualizations for new data with train/new indicators:
-# - Blue (#3498db) for training data, Red (#e74c3c) for new data
-# - Circles ('o') for training, Diamonds ('D') for new in scatter plots
-# - Vertical dashed lines at transition points in time series
-# - Separate bars for train vs new in bar plots
-```
-
 ## 📖 Documentation
 
 ### Module Documentation
@@ -575,9 +378,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Ricoh AI/ML Team**
 
-- **Lead Data Scientist**: Evgeni Nikolaev (evgeni.nikolaev@ricoh-usa.com)
-- **ML Engineers**: Contributing Team Members
-- **Data Engineers**: Contributing Team Members
+- **Lead Data Scientist**: Evgeni Nikolaev, PhD (evgeni.nikolaev@ricoh-usa.com)
 
 *For questions or support, please contact: evgeni.nikolaev@ricoh-usa.com*
 
@@ -589,44 +390,6 @@ The information contained herein is copyright and proprietary to
 Ricoh and may not be reproduced, disclosed, or used in
 any manner without prior written permission from Ricoh.
 ```
-
-## 🙏 Acknowledgments
-
-- **CatBoost Team** - For the excellent gradient boosting framework
-- **TSFresh Contributors** - For the time series feature extraction library
-- **Pydantic Team** - For the data validation framework
-- **Hydra Framework** - For configuration management
-- **Snowflake** - For the data platform
-
-## 📊 Recent Updates
-
-### August 16, 2025
-- Enhanced documentation with professional README structure
-- Added comprehensive module docstrings following project patterns
-- Maintained complete project tree structure
-- Updated with accurate dependency versions from requirements.txt
-- Added proper author attribution and copyright information
-
-### August 15, 2025
-- Visualization improvements with enhanced readability
-- Business logic alignment for churn metrics
-- Font size optimization and marker adjustments
-
-### August 14, 2025
-- Complete test_manual.py refactoring to production-ready code
-- Boolean variable standardization (0/1 encoding)
-- Schema-based type conversion infrastructure
-- Comprehensive business variable documentation
-
-### August 13, 2025
-- Enhanced SnowFetch with dtype transformation analysis
-- Centralized analysis utilities in fetchdata.py
-- Created 18+ example scripts for data operations
-
-### August 11-12, 2025
-- Initial framework design and architecture
-- TSFresh + CatBoost pipeline implementation
-- Diagnostic tools for prediction analysis
 
 ---
 
